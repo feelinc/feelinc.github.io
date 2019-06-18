@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sulaeman</title>
-    <link>/</link>
-    <description>Recent content on Sulaeman</description>
+    <title>Cloud on Sulaeman</title>
+    <link>/tags/cloud/</link>
+    <description>Recent content in Cloud on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Thu, 03 Sep 2015 17:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,19 +20,6 @@
       <guid>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</guid>
       <description>1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP.</description>
-    </item>
-    
-    <item>
-      <title>Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat</title>
-      <link>/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</link>
-      <pubDate>Wed, 02 Sep 2015 16:30:12 +0700</pubDate>
-      
-      <guid>/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</guid>
-      <description>Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all
-Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent
-Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent
-Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent
-Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent</description>
     </item>
     
     <item>
