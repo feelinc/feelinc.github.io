@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Thu, 03 Sep 2015 17:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 21 Dec 2015 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,16 +15,34 @@
     <item>
       <title>Cloud</title>
       <link>/tags/cloud/</link>
-      <pubDate>Thu, 03 Sep 2015 17:30:12 +0700</pubDate>
+      <pubDate>Mon, 21 Dec 2015 16:30:12 +0700</pubDate>
       
       <guid>/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Concept</title>
+      <link>/tags/concept/</link>
+      <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/tags/concept/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>/tags/learning/</link>
+      <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Server</title>
       <link>/tags/server/</link>
-      <pubDate>Thu, 03 Sep 2015 17:30:12 +0700</pubDate>
+      <pubDate>Mon, 21 Dec 2015 16:30:12 +0700</pubDate>
       
       <guid>/tags/server/</guid>
       <description></description>

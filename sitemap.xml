@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</loc>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/mount-partisi-disk-di-google-compute-engine/</loc>
+    <lastmod>2015-12-21T16:30:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</loc>
+    <lastmod>2015-09-04T16:30:12+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</loc>
     <lastmod>2015-09-03T17:30:12+07:00</lastmod>
   </url>
@@ -24,31 +39,43 @@
   
   <url>
     <loc>/tags/cloud/</loc>
-    <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <lastmod>2015-12-21T16:30:12+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/concept/</loc>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/learning/</loc>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/server/</loc>
-    <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <lastmod>2015-12-21T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <lastmod>2015-12-21T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   

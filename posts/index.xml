@@ -7,10 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Thu, 03 Sep 2015 17:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 03 Feb 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Memudahkan pengecekan pembayaran online di bank menggunakan kode unik</title>
+      <link>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</link>
+      <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</guid>
+      <description>Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
+Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
+ Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !
+Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !</description>
+    </item>
+    
+    <item>
+      <title>Mount &amp; Partisi Disk di Google Compute Engine</title>
+      <link>/posts/mount-partisi-disk-di-google-compute-engine/</link>
+      <pubDate>Mon, 21 Dec 2015 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/mount-partisi-disk-di-google-compute-engine/</guid>
+      <description>Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
+Silahkan attach Disk nya ke VM Instance yang akan di pakai.
+Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
+ Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
+sudo fdisk -l
+Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:</description>
+    </item>
+    
+    <item>
+      <title>Upload Backup ke AWS S3 Menggunakan Python Script</title>
+      <link>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</link>
+      <pubDate>Fri, 04 Sep 2015 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</guid>
+      <description>Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder + file backup akan seperti tampilan dibawah.
+[*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
+Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”.</description>
+    </item>
     
     <item>
       <title>Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server</title>
