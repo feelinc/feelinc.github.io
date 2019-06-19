@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Wed, 03 May 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jun 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Membuat Android library wrapper untuk React Native</title>
+      <link>/posts/membuat-android-library-wrapper-untuk-react-native/</link>
+      <pubDate>Sat, 17 Jun 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
+      <description>Pasti manfaat React Native sudah mengerti ya buat apa, kalau belum, silahkan googling dulu gan/sis 🙂
+ Membuat aplikasi untuk Android sangat mudah menggunakan React Native bagi yang berpengalaman menggunakan JavaScript. Tetapi tidak semua komponen untuk Android tersedia. Karena bayangkan saja React Native itu seperti sebuah library yang menghubungkan antara Android native code dan JavaScript. Sehingga semua komponen yang kini tersedia atau bisa digunakan pada Android melalui React Native sebenernya sudah disediakan atau dibungkus (wrapper) oleh para kontributor React Native.</description>
+    </item>
     
     <item>
       <title>Memeriksa pembayaran transaksi jualan online di Bank</title>
