@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Sat, 29 Jul 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Oct 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I’m using Python 3.6 for AWS Lambda Functions</title>
+      <link>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</link>
+      <pubDate>Tue, 24 Oct 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</guid>
+      <description>   PROS CONS     It’s Python It’s Python   It’s Python It’s Python   It’s Python It’s Python     I don’t know why, but it’s works for me! Thanks for reading XD
+ </description>
+    </item>
     
     <item>
       <title>Menambah keamanan OAuth access keys dari Magento 2 REST API</title>

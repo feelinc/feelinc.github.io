@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Electronic on Sulaeman</title>
+    <link>/tags/electronic/</link>
+    <description>Recent content in Electronic on Sulaeman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
+    <lastBuildDate>Wed, 02 Aug 2017 16:30:12 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/electronic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mengganti baterai PSP yang sudah rusak</title>
+      <link>/posts/mengganti-baterai-psp-yang-sudah-rusak/</link>
+      <pubDate>Wed, 02 Aug 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/mengganti-baterai-psp-yang-sudah-rusak/</guid>
+      <description>Kebetulan adik ipar punya PSP 3006 (slim), tetapi jika di charge lampu indikator power tidak menyala. Terkadang bisa menyala, tetapi sering nya tidak menyala. Setelah coba di charge beberapa lama, PSP tidak menyala. Bahkan sambil di charge pun tidak menyala. Hanya dapat menyala jika baterai nya dicabut sambil di charge.
+Kemungkinan nya adalah baterai sudah rusak. Kemudian coba mencari di toko online tipe baterai PSP-110 3.6 v 1200 mah. Ternyata banyak dan murah.</description>
+    </item>
+    
+  </channel>
+</rss>
