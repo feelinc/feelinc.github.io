@@ -7,10 +7,68 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Mon, 13 Feb 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 03 May 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Memeriksa pembayaran transaksi jualan online di Bank</title>
+      <link>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</link>
+      <pubDate>Wed, 03 May 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</guid>
+      <description>Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
+Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Social Login extension</title>
+      <link>/posts/magento-2-social-login-extension/</link>
+      <pubDate>Tue, 02 May 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/magento-2-social-login-extension/</guid>
+      <description>Mencari Magento 2 extension untuk Social Login yang gratis, ketemu, ternyata tidak berfungsi dengan seharusnya, yaitu ada bug nya. Tetapi sedang dibutuhkan untuk website e-commerce. Akhirnya membuat sendiri saja.
+Kebetulan Social Login yang dibutuhkan hanya Facebook, Google, Steam, dan PayPal.
+Karena tidak semua orang mempunyai waktu dan orang teknis untuk membuat hal serupa, maka saya jadikan open source saja di Github.
+Silahkan klik untuk melihat atau menggunakan modul nya.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Unique Grand Total extension</title>
+      <link>/posts/magento-2-unique-grand-total-extension/</link>
+      <pubDate>Mon, 01 May 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/magento-2-unique-grand-total-extension/</guid>
+      <description>Saya memiliki sebuah script PHP yang melakukan pengambilan riwayat transaksi Credit beserta Debit dari beberapa rekening bank yang saya miliki, yaitu di BCA, Mandiri, dan BNI. Rencana nya ingin mengotomatisasi pemeriksaan pembayaran dari para pembeli di toko online.
+Jadi secara alur nya, ketika pembeli telah melakukan konfirmasi pembayaran, maka sistem akan melakukan pemeriksaan pembayaran dari pembeli berdasarkan pesanan. Tetapi bagaimana membedakan transaksi yang tertera pada e-banking adalah benar pembayaran yang dilakukan oleh si pembeli.</description>
+    </item>
+    
+    <item>
+      <title>Membuat partisi SWAP file di CentOS / Fedora / RedHat</title>
+      <link>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
+      <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
+      <description>Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
+ Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
+Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
+ Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
+sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB
+Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.
+Selanjutnya, gunakan perintah – perintah berikut ini:</description>
+    </item>
+    
+    <item>
+      <title>Memulai jualan online, kemudian perlu untuk mempermudah melakukan pengecekan mutasi bank BCA / Mandiri / BNI</title>
+      <link>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
+      <pubDate>Sat, 18 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
+      <description>Sebelum mulai, saya ingatkan! di artikel ini tidak akan memberikan atau menampilkan script / coding untuk melakukan pengecekan mutasi BCA / Mandiri / BNI.
+ Hidup ini perlu perjuangan juragan. Kebetulan sedang menjalankan usaha sampingan jualan online. Karena lelah harus coding itu – itu terus, itu sebab nya saya dulu belajar coding, gak mau hidup monoton! Jadi mudah-mudahan usaha berjualan ini menjadi sumber biaya hidup utama kedepannya.
+Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa dihitung oleh sebelah tangan selama beberapa bulan.</description>
+    </item>
     
     <item>
       <title>Mencoba memakai MobX dengan React untuk pengganti Redux biar gak nambah pusing</title>

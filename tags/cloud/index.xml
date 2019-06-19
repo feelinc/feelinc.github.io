@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Mon, 21 Dec 2015 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Membuat partisi SWAP file di CentOS / Fedora / RedHat</title>
+      <link>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
+      <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
+      <description>Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
+ Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
+Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
+ Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
+sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB
+Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.
+Selanjutnya, gunakan perintah – perintah berikut ini:</description>
+    </item>
     
     <item>
       <title>Mount &amp; Partisi Disk di Google Compute Engine</title>

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Mon, 13 Feb 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 Feb 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Memulai jualan online, kemudian perlu untuk mempermudah melakukan pengecekan mutasi bank BCA / Mandiri / BNI</title>
+      <link>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
+      <pubDate>Sat, 18 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
+      <description>Sebelum mulai, saya ingatkan! di artikel ini tidak akan memberikan atau menampilkan script / coding untuk melakukan pengecekan mutasi BCA / Mandiri / BNI.
+ Hidup ini perlu perjuangan juragan. Kebetulan sedang menjalankan usaha sampingan jualan online. Karena lelah harus coding itu – itu terus, itu sebab nya saya dulu belajar coding, gak mau hidup monoton! Jadi mudah-mudahan usaha berjualan ini menjadi sumber biaya hidup utama kedepannya.
+Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa dihitung oleh sebelah tangan selama beberapa bulan.</description>
+    </item>
     
     <item>
       <title>Mencoba memakai MobX dengan React untuk pengganti Redux biar gak nambah pusing</title>
