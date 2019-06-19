@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</loc>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</loc>
+    <lastmod>2017-06-18T16:30:12+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/membuat-android-library-wrapper-untuk-react-native/</loc>
     <lastmod>2017-06-17T16:30:12+07:00</lastmod>
   </url>
@@ -80,7 +90,7 @@
   
   <url>
     <loc>/tags/code/</loc>
-    <lastmod>2017-06-17T16:30:12+07:00</lastmod>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,13 +102,13 @@
   
   <url>
     <loc>/tags/learning/</loc>
-    <lastmod>2017-06-17T16:30:12+07:00</lastmod>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2017-06-17T16:30:12+07:00</lastmod>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -110,7 +120,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-06-17T16:30:12+07:00</lastmod>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
     <priority>0</priority>
   </url>
   

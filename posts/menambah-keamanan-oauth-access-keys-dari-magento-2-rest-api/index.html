@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Menambah keamanan OAuth access keys dari Magento 2 REST API :: Sulaeman — Mikir...</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
+ Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
+Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?"/>
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Menambah keamanan OAuth access keys dari Magento 2 REST API :: Sulaeman — Mikir..." />
+<meta name="twitter:description" content="Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
+ Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
+Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Sulaeman" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Menambah keamanan OAuth access keys dari Magento 2 REST API :: Sulaeman — Mikir...">
+<meta property="og:description" content="Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
+ Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
+Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?" />
+<meta property="og:url" content="/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/" />
+<meta property="og:site_name" content="Menambah keamanan OAuth access keys dari Magento 2 REST API" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-07-29 16:30:12 &#43;0700 WIB" />
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sulaeman
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://github.com/feelinc">Github</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://github.com/feelinc">Github</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/">Menambah keamanan OAuth access keys dari Magento 2 REST API</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2017-07-29
+    </span>
+    
+    
+    <span class="post-author">::
+      Sulaeman
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/learning/">learning</a>&nbsp;
+    
+    #<a href="/tags/code/">code</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    <p><img src="/img/securing-magento-2-rest-api.jpg" alt="Menambah keamanan OAuth access keys dari Magento 2 REST API" /></p>
+
+<blockquote>
+<p>Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan</p>
+</blockquote>
+
+<p>Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki <code>consumer key</code>, <code>consumer secret</code>, <code>access token</code>, dan <code>access token secret</code>.</p>
+
+<p>Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?</p>
+
+<p>Memang benar bahwa aplikasi desktop atau mobile akan di compile sebelum bisa dijalankan, tetapi pastinya bisa di decompile. Contoh nya seperti sebuah aplikasi android yang berupa file .apk dapat di decompile dan dilihat source nya dengan jelas. Sehingga jika credential tadi tertulis di source code, maka siap-siap akan dapat dilihat oleh orang lain yang mempunyai file .apk nya.</p>
+
+<p>Pernah melihat informasi apa saja yang harus diisi ketika akan membuat OAuth client untuk Facebook dan Google?</p>
+
+<p><img src="/img/securing-magento-2-rest-api-fb.jpg" alt="" /></p>
+
+<p><img src="/img/securing-magento-2-rest-api-google.jpg" alt="" /></p>
+
+<p>Dapat terlihat pada dua screenshot diatas, Facebook dan Google mengharuskan kita untuk mengisi <code>Key Hash</code> atau <code>Signing-certificate</code> dan <code>Package Name</code>. Sehingga selain OAuth credentials, hal-hal lain juga dapat kita tambahkan untuk diverifikasi ketika API Client mengakses endpoints.</p>
+
+<p>Dapat mencoba membuat sebuah modul/plugin Magento 2 untuk hal ini dengan input admin seperti contoh dibawah.</p>
+
+<p><img src="/img/securing-magento-2-rest-api-admin.jpg" alt="" /></p>
+
+<p>Untuk menambah verifikasi tadi, kita bisa menambahkan sebuah <code>userContext</code>. Dimana <code>Authorization</code> module di Magento 2 akan mengeksekusi semua userContext yang terdaftar dengan memanggil fungsi <code>getUserId</code> dan <code>getUserType</code>. Untuk hal ini, kita memungkinkan untuk menambahkan userContext setelah sortOrder 10 dan sebelum sortOrder 40 seperti terlihat pada gambar dibawah ditemukan dalam <code>Webapi module</code>.</p>
+
+<p><img src="/img/securing-magento-2-rest-api-webapi-di.jpg" alt="" /></p>
+
+<p>Dari referensi gambar diatas, maka kita dapat membuah userContext baru seperti contoh terlihat pada gambar dibawah.</p>
+
+<p><img src="/img/securing-magento-2-rest-api-module-di.jpg" alt="" /></p>
+
+<p>Kemudian verifikasi didalam ClientContext contoh pada gambar diatas, dapat berupa seperti terlihat pada gambar dibawah.</p>
+
+<p><img src="/img/securing-magento-2-rest-api-module-functions.jpg" alt="" /></p>
+
+<p>Dimana ketika <code>false</code> adalah verifikasi menurut kita gagal dan akan menyatakan bahwa <code>Invalid request</code> untuk API Client response.</p>
+
+<p>Tugas selanjutnya dari developer aplikasi pendukung adalah mengirim informasi yang dibutuhkan ketika melakukan request terhadap Magento 2 REST API sehingga lolos verifikasi.</p>
+
+<p>Berbagai macam verifikasi terhadap API Client request dapat kita lakukan tergantung kebutuhan dan kemampuan sehingga tercapai tingkat keamanan yang lebih mumpuni terhadap akses dan data Magento 2 REST API kita.</p>
+
+<p>Tidak 100% celah keamanan dapat kita cegah seiring berjalannya waktu, sehingga tugas developer untuk terus meningkatkan pengetahuan dalam melakukan implementasi keamanan yang memadai.</p>
+
+<p>Semoga cukup penjelasan dalam artikel ini dapat memberi dasar pencerahan untuk meningkatkan keamanan instalasi Magento 2 REST API Anda.</p>
+
+<p>— enjoy</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/">
+          <span class="button__text">Memperbaiki performance mobile app yang dibangun menggunakan React Native</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

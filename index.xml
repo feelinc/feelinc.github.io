@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Sat, 17 Jun 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jul 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Menambah keamanan OAuth access keys dari Magento 2 REST API</title>
+      <link>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
+      <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
+      <description>Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
+ Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
+Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?</description>
+    </item>
+    
+    <item>
+      <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native</title>
+      <link>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
+      <pubDate>Sun, 18 Jun 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
+      <description>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
+ Penyebabnya bisa dari berbagai macam hal :
+ Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan.</description>
+    </item>
     
     <item>
       <title>Membuat Android library wrapper untuk React Native</title>
