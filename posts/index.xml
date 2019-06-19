@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Fri, 03 Feb 2017 16:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 13 Feb 2017 16:30:12 +0700</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mencoba memakai MobX dengan React untuk pengganti Redux biar gak nambah pusing</title>
+      <link>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</link>
+      <pubDate>Mon, 13 Feb 2017 16:30:12 +0700</pubDate>
+      
+      <guid>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</guid>
+      <description>Mikirin flow aplikasi React kita juga udah pusing, jangan sampai library tambahan yang kita pakai malah nambah pusing.
+ Mungkin akan ada yang bilang bahwa saya gak bener aja menggunakannya Redux sehingga bikin pusing. Mungkin bener juga apa yang situ bilang, jadi komen aja harusnya seperti apa best practice nya. Really appreciated.
+Tapi untuk saat ini, menggunakan MobX mengurangi pusing saya dalam membuat aplikasi menggunakan React. Saya gak akan membandingkan Redux dengan MobX.</description>
+    </item>
     
     <item>
       <title>Memudahkan pengecekan pembayaran online di bank menggunakan kode unik</title>
