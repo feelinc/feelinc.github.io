@@ -5,144 +5,188 @@
   <url>
     <loc>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</loc>
     <lastmod>2017-10-24T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/mengganti-baterai-psp-yang-sudah-rusak/</loc>
     <lastmod>2017-08-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</loc>
     <lastmod>2017-07-29T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</loc>
     <lastmod>2017-06-18T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/membuat-android-library-wrapper-untuk-react-native/</loc>
     <lastmod>2017-06-17T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</loc>
     <lastmod>2017-05-03T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/magento-2-social-login-extension/</loc>
     <lastmod>2017-05-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/magento-2-unique-grand-total-extension/</loc>
     <lastmod>2017-05-01T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</loc>
     <lastmod>2017-03-08T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</loc>
     <lastmod>2017-02-18T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</loc>
     <lastmod>2017-02-13T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</loc>
     <lastmod>2017-02-03T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/mount-partisi-disk-di-google-compute-engine/</loc>
     <lastmod>2015-12-21T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</loc>
     <lastmod>2015-09-04T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</loc>
     <lastmod>2015-09-03T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</loc>
     <lastmod>2015-09-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</loc>
     <lastmod>2015-09-01T16:20:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/cloud/</loc>
     <lastmod>2017-03-08T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/code/</loc>
     <lastmod>2017-07-29T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/concept/</loc>
     <lastmod>2017-02-03T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/electronic/</loc>
     <lastmod>2017-08-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/learning/</loc>
     <lastmod>2017-10-24T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
     <lastmod>2017-10-24T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/server/</loc>
     <lastmod>2017-03-08T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2017-10-24T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2017-03-08T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
