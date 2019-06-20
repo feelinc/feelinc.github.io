@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learning on Sulaeman</title>
-    <link>/tags/learning/</link>
+    <link>https://sulaeman.com/tags/learning/</link>
     <description>Recent content in Learning on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Tue, 24 Oct 2017 16:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sulaeman.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why I’m using Python 3.6 for AWS Lambda Functions</title>
-      <link>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</link>
+      <link>https://sulaeman.com/posts/why-im-using-python-3-6-for-aws-lambda-functions/</link>
       <pubDate>Tue, 24 Oct 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</guid>
+      <guid>https://sulaeman.com/posts/why-im-using-python-3-6-for-aws-lambda-functions/</guid>
       <description>   PROS CONS     It’s Python It’s Python   It’s Python It’s Python   It’s Python It’s Python     I don’t know why, but it’s works for me! Thanks for reading XD
  </description>
     </item>
     
     <item>
       <title>Menambah keamanan OAuth access keys dari Magento 2 REST API</title>
-      <link>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
+      <link>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
       <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
+      <guid>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
       <description>Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
  Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
 Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?</description>
@@ -35,10 +35,10 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native</title>
-      <link>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
+      <link>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
       <pubDate>Sun, 18 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
+      <guid>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
       <description>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
  Penyebabnya bisa dari berbagai macam hal :
  Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan.</description>
@@ -46,20 +46,20 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Membuat Android library wrapper untuk React Native</title>
-      <link>/posts/membuat-android-library-wrapper-untuk-react-native/</link>
+      <link>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</link>
       <pubDate>Sat, 17 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
+      <guid>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
       <description>Pasti manfaat React Native sudah mengerti ya buat apa, kalau belum, silahkan googling dulu gan/sis 🙂
  Membuat aplikasi untuk Android sangat mudah menggunakan React Native bagi yang berpengalaman menggunakan JavaScript. Tetapi tidak semua komponen untuk Android tersedia. Karena bayangkan saja React Native itu seperti sebuah library yang menghubungkan antara Android native code dan JavaScript. Sehingga semua komponen yang kini tersedia atau bisa digunakan pada Android melalui React Native sebenernya sudah disediakan atau dibungkus (wrapper) oleh para kontributor React Native.</description>
     </item>
     
     <item>
       <title>Memulai jualan online, kemudian perlu untuk mempermudah melakukan pengecekan mutasi bank BCA / Mandiri / BNI</title>
-      <link>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
+      <link>https://sulaeman.com/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
       <pubDate>Sat, 18 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
+      <guid>https://sulaeman.com/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
       <description>Sebelum mulai, saya ingatkan! di artikel ini tidak akan memberikan atau menampilkan script / coding untuk melakukan pengecekan mutasi BCA / Mandiri / BNI.
  Hidup ini perlu perjuangan juragan. Kebetulan sedang menjalankan usaha sampingan jualan online. Karena lelah harus coding itu – itu terus, itu sebab nya saya dulu belajar coding, gak mau hidup monoton! Jadi mudah-mudahan usaha berjualan ini menjadi sumber biaya hidup utama kedepannya.
 Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa dihitung oleh sebelah tangan selama beberapa bulan.</description>
@@ -67,10 +67,10 @@ Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa di
     
     <item>
       <title>Mencoba memakai MobX dengan React untuk pengganti Redux biar gak nambah pusing</title>
-      <link>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</link>
+      <link>https://sulaeman.com/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</link>
       <pubDate>Mon, 13 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</guid>
+      <guid>https://sulaeman.com/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</guid>
       <description>Mikirin flow aplikasi React kita juga udah pusing, jangan sampai library tambahan yang kita pakai malah nambah pusing.
  Mungkin akan ada yang bilang bahwa saya gak bener aja menggunakannya Redux sehingga bikin pusing. Mungkin bener juga apa yang situ bilang, jadi komen aja harusnya seperti apa best practice nya. Really appreciated.
 Tapi untuk saat ini, menggunakan MobX mengurangi pusing saya dalam membuat aplikasi menggunakan React. Saya gak akan membandingkan Redux dengan MobX.</description>
@@ -78,10 +78,10 @@ Tapi untuk saat ini, menggunakan MobX mengurangi pusing saya dalam membuat aplik
     
     <item>
       <title>Memudahkan pengecekan pembayaran online di bank menggunakan kode unik</title>
-      <link>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</link>
+      <link>https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</link>
       <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</guid>
+      <guid>https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</guid>
       <description>Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
 Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
  Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !

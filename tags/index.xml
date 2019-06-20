@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sulaeman</title>
-    <link>/tags/</link>
+    <link>https://sulaeman.com/tags/</link>
     <description>Recent content in Tags on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Wed, 08 Mar 2017 16:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sulaeman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cloud</title>
-      <link>/tags/cloud/</link>
+      <link>https://sulaeman.com/tags/cloud/</link>
       <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/cloud/</guid>
+      <guid>https://sulaeman.com/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>/tags/code/</link>
+      <link>https://sulaeman.com/tags/code/</link>
       <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/code/</guid>
+      <guid>https://sulaeman.com/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Concept</title>
-      <link>/tags/concept/</link>
+      <link>https://sulaeman.com/tags/concept/</link>
       <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/concept/</guid>
+      <guid>https://sulaeman.com/tags/concept/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Electronic</title>
-      <link>/tags/electronic/</link>
+      <link>https://sulaeman.com/tags/electronic/</link>
       <pubDate>Wed, 02 Aug 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/electronic/</guid>
+      <guid>https://sulaeman.com/tags/electronic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning</title>
-      <link>/tags/learning/</link>
+      <link>https://sulaeman.com/tags/learning/</link>
       <pubDate>Tue, 24 Oct 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/learning/</guid>
+      <guid>https://sulaeman.com/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Server</title>
-      <link>/tags/server/</link>
+      <link>https://sulaeman.com/tags/server/</link>
       <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
       
-      <guid>/tags/server/</guid>
+      <guid>https://sulaeman.com/tags/server/</guid>
       <description></description>
     </item>
     

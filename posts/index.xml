@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sulaeman</title>
-    <link>/posts/</link>
+    <link>https://sulaeman.com/posts/</link>
     <description>Recent content in Posts on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Tue, 24 Oct 2017 16:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sulaeman.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why I’m using Python 3.6 for AWS Lambda Functions</title>
-      <link>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</link>
+      <link>https://sulaeman.com/posts/why-im-using-python-3-6-for-aws-lambda-functions/</link>
       <pubDate>Tue, 24 Oct 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/why-im-using-python-3-6-for-aws-lambda-functions/</guid>
+      <guid>https://sulaeman.com/posts/why-im-using-python-3-6-for-aws-lambda-functions/</guid>
       <description>   PROS CONS     It’s Python It’s Python   It’s Python It’s Python   It’s Python It’s Python     I don’t know why, but it’s works for me! Thanks for reading XD
  </description>
     </item>
     
     <item>
       <title>Mengganti baterai PSP yang sudah rusak</title>
-      <link>/posts/mengganti-baterai-psp-yang-sudah-rusak/</link>
+      <link>https://sulaeman.com/posts/mengganti-baterai-psp-yang-sudah-rusak/</link>
       <pubDate>Wed, 02 Aug 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/mengganti-baterai-psp-yang-sudah-rusak/</guid>
+      <guid>https://sulaeman.com/posts/mengganti-baterai-psp-yang-sudah-rusak/</guid>
       <description>Kebetulan adik ipar punya PSP 3006 (slim), tetapi jika di charge lampu indikator power tidak menyala. Terkadang bisa menyala, tetapi sering nya tidak menyala. Setelah coba di charge beberapa lama, PSP tidak menyala. Bahkan sambil di charge pun tidak menyala. Hanya dapat menyala jika baterai nya dicabut sambil di charge.
 Kemungkinan nya adalah baterai sudah rusak. Kemudian coba mencari di toko online tipe baterai PSP-110 3.6 v 1200 mah. Ternyata banyak dan murah.</description>
     </item>
     
     <item>
       <title>Menambah keamanan OAuth access keys dari Magento 2 REST API</title>
-      <link>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
+      <link>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
       <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
+      <guid>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
       <description>Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
  Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
 Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?</description>
@@ -45,10 +45,10 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native</title>
-      <link>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
+      <link>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
       <pubDate>Sun, 18 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
+      <guid>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
       <description>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
  Penyebabnya bisa dari berbagai macam hal :
  Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan.</description>
@@ -56,30 +56,30 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Membuat Android library wrapper untuk React Native</title>
-      <link>/posts/membuat-android-library-wrapper-untuk-react-native/</link>
+      <link>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</link>
       <pubDate>Sat, 17 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
+      <guid>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
       <description>Pasti manfaat React Native sudah mengerti ya buat apa, kalau belum, silahkan googling dulu gan/sis 🙂
  Membuat aplikasi untuk Android sangat mudah menggunakan React Native bagi yang berpengalaman menggunakan JavaScript. Tetapi tidak semua komponen untuk Android tersedia. Karena bayangkan saja React Native itu seperti sebuah library yang menghubungkan antara Android native code dan JavaScript. Sehingga semua komponen yang kini tersedia atau bisa digunakan pada Android melalui React Native sebenernya sudah disediakan atau dibungkus (wrapper) oleh para kontributor React Native.</description>
     </item>
     
     <item>
       <title>Memeriksa pembayaran transaksi jualan online di Bank</title>
-      <link>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</link>
+      <link>https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</link>
       <pubDate>Wed, 03 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</guid>
+      <guid>https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</guid>
       <description>Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
 Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel.</description>
     </item>
     
     <item>
       <title>Magento 2 – Social Login extension</title>
-      <link>/posts/magento-2-social-login-extension/</link>
+      <link>https://sulaeman.com/posts/magento-2-social-login-extension/</link>
       <pubDate>Tue, 02 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/magento-2-social-login-extension/</guid>
+      <guid>https://sulaeman.com/posts/magento-2-social-login-extension/</guid>
       <description>Mencari Magento 2 extension untuk Social Login yang gratis, ketemu, ternyata tidak berfungsi dengan seharusnya, yaitu ada bug nya. Tetapi sedang dibutuhkan untuk website e-commerce. Akhirnya membuat sendiri saja.
 Kebetulan Social Login yang dibutuhkan hanya Facebook, Google, Steam, dan PayPal.
 Karena tidak semua orang mempunyai waktu dan orang teknis untuk membuat hal serupa, maka saya jadikan open source saja di Github.
@@ -88,20 +88,20 @@ Silahkan klik untuk melihat atau menggunakan modul nya.</description>
     
     <item>
       <title>Magento 2 – Unique Grand Total extension</title>
-      <link>/posts/magento-2-unique-grand-total-extension/</link>
+      <link>https://sulaeman.com/posts/magento-2-unique-grand-total-extension/</link>
       <pubDate>Mon, 01 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/magento-2-unique-grand-total-extension/</guid>
+      <guid>https://sulaeman.com/posts/magento-2-unique-grand-total-extension/</guid>
       <description>Saya memiliki sebuah script PHP yang melakukan pengambilan riwayat transaksi Credit beserta Debit dari beberapa rekening bank yang saya miliki, yaitu di BCA, Mandiri, dan BNI. Rencana nya ingin mengotomatisasi pemeriksaan pembayaran dari para pembeli di toko online.
 Jadi secara alur nya, ketika pembeli telah melakukan konfirmasi pembayaran, maka sistem akan melakukan pemeriksaan pembayaran dari pembeli berdasarkan pesanan. Tetapi bagaimana membedakan transaksi yang tertera pada e-banking adalah benar pembayaran yang dilakukan oleh si pembeli.</description>
     </item>
     
     <item>
       <title>Membuat partisi SWAP file di CentOS / Fedora / RedHat</title>
-      <link>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
+      <link>https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
       <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
+      <guid>https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
       <description>Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
  Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
 Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
@@ -113,10 +113,10 @@ Selanjutnya, gunakan perintah – perintah berikut ini:</description>
     
     <item>
       <title>Memulai jualan online, kemudian perlu untuk mempermudah melakukan pengecekan mutasi bank BCA / Mandiri / BNI</title>
-      <link>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
+      <link>https://sulaeman.com/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</link>
       <pubDate>Sat, 18 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
+      <guid>https://sulaeman.com/posts/memulai-jualan-online-kemudian-perlu-untuk-mempermudah-melakukan-pengecekan-mutasi-bank-bca-mandiri-bni/</guid>
       <description>Sebelum mulai, saya ingatkan! di artikel ini tidak akan memberikan atau menampilkan script / coding untuk melakukan pengecekan mutasi BCA / Mandiri / BNI.
  Hidup ini perlu perjuangan juragan. Kebetulan sedang menjalankan usaha sampingan jualan online. Karena lelah harus coding itu – itu terus, itu sebab nya saya dulu belajar coding, gak mau hidup monoton! Jadi mudah-mudahan usaha berjualan ini menjadi sumber biaya hidup utama kedepannya.
 Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa dihitung oleh sebelah tangan selama beberapa bulan.</description>
@@ -124,10 +124,10 @@ Ketika memulai usaha jualan online ini, pasti pesanan baru dikit banget, bisa di
     
     <item>
       <title>Mencoba memakai MobX dengan React untuk pengganti Redux biar gak nambah pusing</title>
-      <link>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</link>
+      <link>https://sulaeman.com/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</link>
       <pubDate>Mon, 13 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</guid>
+      <guid>https://sulaeman.com/posts/mencoba-memakai-mobx-dengan-react-untuk-pengganti-redux-biar-gak-nambah-pusing/</guid>
       <description>Mikirin flow aplikasi React kita juga udah pusing, jangan sampai library tambahan yang kita pakai malah nambah pusing.
  Mungkin akan ada yang bilang bahwa saya gak bener aja menggunakannya Redux sehingga bikin pusing. Mungkin bener juga apa yang situ bilang, jadi komen aja harusnya seperti apa best practice nya. Really appreciated.
 Tapi untuk saat ini, menggunakan MobX mengurangi pusing saya dalam membuat aplikasi menggunakan React. Saya gak akan membandingkan Redux dengan MobX.</description>
@@ -135,10 +135,10 @@ Tapi untuk saat ini, menggunakan MobX mengurangi pusing saya dalam membuat aplik
     
     <item>
       <title>Memudahkan pengecekan pembayaran online di bank menggunakan kode unik</title>
-      <link>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</link>
+      <link>https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</link>
       <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</guid>
+      <guid>https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</guid>
       <description>Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
 Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
  Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !
@@ -147,10 +147,10 @@ Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengiri
     
     <item>
       <title>Mount &amp; Partisi Disk di Google Compute Engine</title>
-      <link>/posts/mount-partisi-disk-di-google-compute-engine/</link>
+      <link>https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/</link>
       <pubDate>Mon, 21 Dec 2015 16:30:12 +0700</pubDate>
       
-      <guid>/posts/mount-partisi-disk-di-google-compute-engine/</guid>
+      <guid>https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/</guid>
       <description>Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
 Silahkan attach Disk nya ke VM Instance yang akan di pakai.
 Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
@@ -161,10 +161,10 @@ Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:</desc
     
     <item>
       <title>Upload Backup ke AWS S3 Menggunakan Python Script</title>
-      <link>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</link>
+      <link>https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</link>
       <pubDate>Fri, 04 Sep 2015 16:30:12 +0700</pubDate>
       
-      <guid>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</guid>
+      <guid>https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</guid>
       <description>Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder + file backup akan seperti tampilan dibawah.
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
 Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”.</description>
@@ -172,20 +172,20 @@ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai 
     
     <item>
       <title>Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server</title>
-      <link>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</link>
+      <link>https://sulaeman.com/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</link>
       <pubDate>Thu, 03 Sep 2015 17:30:12 +0700</pubDate>
       
-      <guid>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</guid>
+      <guid>https://sulaeman.com/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</guid>
       <description>1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP.</description>
     </item>
     
     <item>
       <title>Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat</title>
-      <link>/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</link>
+      <link>https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</link>
       <pubDate>Wed, 02 Sep 2015 16:30:12 +0700</pubDate>
       
-      <guid>/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</guid>
+      <guid>https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/</guid>
       <description>Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all
 Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent
 Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent
@@ -195,10 +195,10 @@ Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-ri
     
     <item>
       <title>Mount Partisi Amazon Web Service EBS Volume di EC2</title>
-      <link>/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</link>
+      <link>https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</link>
       <pubDate>Tue, 01 Sep 2015 16:20:12 +0700</pubDate>
       
-      <guid>/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</guid>
+      <guid>https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</guid>
       <description>Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
 Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Sulaeman</title>
-    <link>/tags/code/</link>
+    <link>https://sulaeman.com/tags/code/</link>
     <description>Recent content in Code on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Sat, 29 Jul 2017 16:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/tags/code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sulaeman.com/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Menambah keamanan OAuth access keys dari Magento 2 REST API</title>
-      <link>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
+      <link>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</link>
       <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
+      <guid>https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/</guid>
       <description>Ketika membuat sebuah aplikasi pendukung berupa desktop atau mobile yang menggunakan REST API dari Magento 2, yang paling utama harus diperhatikan adalah masalah keamanan
  Magento 2 memang telah menerapkan OAuth 1.0 (pada saat artikel ini ditulis), untuk mengamankan hampir semua endpoints nya. Sehingga setiap aplikasi pendukung berupa desktop atau mobile yang ingin mengakses endpoints tertentu harus memiliki consumer key, consumer secret, access token, dan access token secret.
 Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapat dilihat atau diakses oleh orang yang tidak diharapkan atau tidak bertanggung jawab?</description>
@@ -25,10 +25,10 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native</title>
-      <link>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
+      <link>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</link>
       <pubDate>Sun, 18 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
+      <guid>https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/</guid>
       <description>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
  Penyebabnya bisa dari berbagai macam hal :
  Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan.</description>
@@ -36,30 +36,30 @@ Tetapi apakah yakin credential yang berada didalam aplikasi pendukung tidak dapa
     
     <item>
       <title>Membuat Android library wrapper untuk React Native</title>
-      <link>/posts/membuat-android-library-wrapper-untuk-react-native/</link>
+      <link>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</link>
       <pubDate>Sat, 17 Jun 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
+      <guid>https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/</guid>
       <description>Pasti manfaat React Native sudah mengerti ya buat apa, kalau belum, silahkan googling dulu gan/sis 🙂
  Membuat aplikasi untuk Android sangat mudah menggunakan React Native bagi yang berpengalaman menggunakan JavaScript. Tetapi tidak semua komponen untuk Android tersedia. Karena bayangkan saja React Native itu seperti sebuah library yang menghubungkan antara Android native code dan JavaScript. Sehingga semua komponen yang kini tersedia atau bisa digunakan pada Android melalui React Native sebenernya sudah disediakan atau dibungkus (wrapper) oleh para kontributor React Native.</description>
     </item>
     
     <item>
       <title>Memeriksa pembayaran transaksi jualan online di Bank</title>
-      <link>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</link>
+      <link>https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</link>
       <pubDate>Wed, 03 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</guid>
+      <guid>https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/</guid>
       <description>Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
 Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel.</description>
     </item>
     
     <item>
       <title>Magento 2 – Social Login extension</title>
-      <link>/posts/magento-2-social-login-extension/</link>
+      <link>https://sulaeman.com/posts/magento-2-social-login-extension/</link>
       <pubDate>Tue, 02 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/magento-2-social-login-extension/</guid>
+      <guid>https://sulaeman.com/posts/magento-2-social-login-extension/</guid>
       <description>Mencari Magento 2 extension untuk Social Login yang gratis, ketemu, ternyata tidak berfungsi dengan seharusnya, yaitu ada bug nya. Tetapi sedang dibutuhkan untuk website e-commerce. Akhirnya membuat sendiri saja.
 Kebetulan Social Login yang dibutuhkan hanya Facebook, Google, Steam, dan PayPal.
 Karena tidak semua orang mempunyai waktu dan orang teknis untuk membuat hal serupa, maka saya jadikan open source saja di Github.
@@ -68,10 +68,10 @@ Silahkan klik untuk melihat atau menggunakan modul nya.</description>
     
     <item>
       <title>Magento 2 – Unique Grand Total extension</title>
-      <link>/posts/magento-2-unique-grand-total-extension/</link>
+      <link>https://sulaeman.com/posts/magento-2-unique-grand-total-extension/</link>
       <pubDate>Mon, 01 May 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/magento-2-unique-grand-total-extension/</guid>
+      <guid>https://sulaeman.com/posts/magento-2-unique-grand-total-extension/</guid>
       <description>Saya memiliki sebuah script PHP yang melakukan pengambilan riwayat transaksi Credit beserta Debit dari beberapa rekening bank yang saya miliki, yaitu di BCA, Mandiri, dan BNI. Rencana nya ingin mengotomatisasi pemeriksaan pembayaran dari para pembeli di toko online.
 Jadi secara alur nya, ketika pembeli telah melakukan konfirmasi pembayaran, maka sistem akan melakukan pemeriksaan pembayaran dari pembeli berdasarkan pesanan. Tetapi bagaimana membedakan transaksi yang tertera pada e-banking adalah benar pembayaran yang dilakukan oleh si pembeli.</description>
     </item>

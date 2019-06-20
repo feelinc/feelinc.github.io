@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Sulaeman</title>
-    <link>/tags/cloud/</link>
+    <link>https://sulaeman.com/tags/cloud/</link>
     <description>Recent content in Cloud on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
     <lastBuildDate>Wed, 08 Mar 2017 16:30:12 +0700</lastBuildDate>
     
-	<atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sulaeman.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Membuat partisi SWAP file di CentOS / Fedora / RedHat</title>
-      <link>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
+      <link>https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</link>
       <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
       
-      <guid>/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
+      <guid>https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/</guid>
       <description>Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
  Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
 Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
@@ -29,10 +29,10 @@ Selanjutnya, gunakan perintah – perintah berikut ini:</description>
     
     <item>
       <title>Mount &amp; Partisi Disk di Google Compute Engine</title>
-      <link>/posts/mount-partisi-disk-di-google-compute-engine/</link>
+      <link>https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/</link>
       <pubDate>Mon, 21 Dec 2015 16:30:12 +0700</pubDate>
       
-      <guid>/posts/mount-partisi-disk-di-google-compute-engine/</guid>
+      <guid>https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/</guid>
       <description>Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
 Silahkan attach Disk nya ke VM Instance yang akan di pakai.
 Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
@@ -43,10 +43,10 @@ Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:</desc
     
     <item>
       <title>Upload Backup ke AWS S3 Menggunakan Python Script</title>
-      <link>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</link>
+      <link>https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</link>
       <pubDate>Fri, 04 Sep 2015 16:30:12 +0700</pubDate>
       
-      <guid>/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</guid>
+      <guid>https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/</guid>
       <description>Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder + file backup akan seperti tampilan dibawah.
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
 Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”.</description>
@@ -54,20 +54,20 @@ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai 
     
     <item>
       <title>Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server</title>
-      <link>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</link>
+      <link>https://sulaeman.com/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</link>
       <pubDate>Thu, 03 Sep 2015 17:30:12 +0700</pubDate>
       
-      <guid>/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</guid>
+      <guid>https://sulaeman.com/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/</guid>
       <description>1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP.</description>
     </item>
     
     <item>
       <title>Mount Partisi Amazon Web Service EBS Volume di EC2</title>
-      <link>/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</link>
+      <link>https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</link>
       <pubDate>Tue, 01 Sep 2015 16:20:12 +0700</pubDate>
       
-      <guid>/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</guid>
+      <guid>https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/</guid>
       <description>Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
 Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
