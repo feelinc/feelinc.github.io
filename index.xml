@@ -26,7 +26,7 @@
     <item>
       <title>Mencoba menggunakan layanan AWS Elasticsearch</title>
       <link>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</link>
-      <pubDate>Fri, 20 Nov 2020 17:30:12 +0700</pubDate>
+      <pubDate>Thu, 19 Nov 2020 17:30:12 +0700</pubDate>
       
       <guid>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</guid>
       <description>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah self-managed Elasticsearch cluster. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari self-managed Elasticsearch cluster ke AWS Elasticsearch Service
