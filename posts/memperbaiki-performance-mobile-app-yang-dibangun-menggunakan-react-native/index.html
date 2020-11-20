@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
   
-    <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native :: Sulaeman — Mikir...</title>
+    <title>Memperbaiki performance mobile app yang dibangun menggunakan React Native :: Sulaeman</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
  Penyebabnya bisa dari berbagai macam hal :
- Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan."/>
-<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
-<meta name="robots" content="noodp"/>
+ Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan." />
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 <link rel="stylesheet" href="https://sulaeman.com/assets/style.css">
@@ -23,35 +38,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sulaeman.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="https://sulaeman.com/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
+  <link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Memperbaiki performance mobile app yang dibangun menggunakan React Native :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
- Penyebabnya bisa dari berbagai macam hal :
- Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan." />
-<meta name="twitter:site" content="https://sulaeman.com/" />
-<meta name="twitter:creator" content="Sulaeman" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Memperbaiki performance mobile app yang dibangun menggunakan React Native :: Sulaeman — Mikir...">
-<meta property="og:description" content="Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi
- Penyebabnya bisa dari berbagai macam hal :
- Tidak menggunakan komponen yang tepat. Data yang diolah pada sebuah bagian komponen berlebihan. Pengolahan data tidak berada di bagian komponen dan waktu yang tepat. Proses pengolahan data menggunakan coding yang tidak tepat. Komponen selalu melakukan update / render padahal tidak diperlukan." />
+<meta property="og:title" content="Memperbaiki performance mobile app yang dibangun menggunakan React Native">
+<meta property="og:description" content="Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi" />
 <meta property="og:url" content="https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/" />
-<meta property="og:site_name" content="Memperbaiki performance mobile app yang dibangun menggunakan React Native" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Sulaeman" />
+
+  
+    <meta property="og:image" content="https://sulaeman.com/img/favicon/green.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2017-06-18 16:30:12 &#43;0700 WIB" />
+
+  <meta property="article:published_time" content="2017-06-18 16:30:12 &#43;0700 WIB" />
+
 
 
 
@@ -77,10 +90,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="">
+<body class="green">
 
 
-<div class="container center">
+<div class="container center headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -92,7 +105,9 @@ if (!doNotTrack) {
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -133,6 +148,8 @@ if (!doNotTrack) {
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -169,6 +186,7 @@ if (!doNotTrack) {
         <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -182,15 +200,13 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://sulaeman.com/posts/memperbaiki-performance-mobile-app-yang-dibangun-menggunakan-react-native/">Memperbaiki performance mobile app yang dibangun menggunakan React Native</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2017-06-18
-    </span>
+    
+      <span class="post-date">
+        2017-06-18 
+      </span>
     
     
-    <span class="post-author">::
-      Sulaeman
-    </span>
+    <span class="post-author">:: Sulaeman</span>
     
   </div>
 
@@ -206,8 +222,10 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <p><img src="/img/react-perf-chrome-timeline.png" alt="Memperbaiki performance mobile app yang dibangun menggunakan React Native"></p>
+  
+
+  <div class="post-content"><div>
+        <p><img src="/img/react-perf-chrome-timeline.png" alt="Memperbaiki performance mobile app yang dibangun menggunakan React Native"></p>
 <blockquote>
 <p>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi</p>
 </blockquote>
@@ -265,33 +283,35 @@ if (!doNotTrack) {
 <p>Sekian, semoga artikel ini bermanfaat bagi pengguna React Native baru.</p>
 <p>— enjoy</p>
 
-  </div>
+      </div></div>
+
   
-  <div class="pagination">
+  
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Menambah keamanan OAuth access keys dari Magento 2 REST API</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/">
-          <span class="button__text">Membuat Android library wrapper untuk React Native</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
+        
+        <span class="button previous">
+            <a href="https://sulaeman.com/posts/menambah-keamanan-oauth-access-keys-dari-magento-2-rest-api/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Menambah keamanan OAuth access keys dari Magento 2 REST API</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/">
+                <span class="button__text">Membuat Android library wrapper untuk React Native</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
     </div>
-  </div>
+</div>
+
   
 
   
@@ -304,13 +324,18 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">
+        <span>&copy; Sulaeman :: Powered by gohugo.io</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://sulaeman.com/assets/main.js"></script>
 <script src="https://sulaeman.com/assets/prism.js"></script>
+
+
 
 
 

@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
   
-    <title>Migrasi data ke Amazon Elasticsearch Service :: Sulaeman — Mikir...</title>
+    <title>Migrasi data ke Amazon Elasticsearch Service :: Sulaeman</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari self-managed Elasticsearch cluster ke Amazon Elasticsearch Service.
  Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi Migrating to Amazon Elasticsearch Service dan tidak melanjutkan membaca langkah-langkah yang saya pakai.
- Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot."/>
-<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
-<meta name="robots" content="noodp"/>
+ Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot." />
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 <link rel="stylesheet" href="https://sulaeman.com/assets/style.css">
@@ -23,35 +38,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sulaeman.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="https://sulaeman.com/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
+  <link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Migrasi data ke Amazon Elasticsearch Service :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari self-managed Elasticsearch cluster ke Amazon Elasticsearch Service.
- Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi Migrating to Amazon Elasticsearch Service dan tidak melanjutkan membaca langkah-langkah yang saya pakai.
- Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot." />
-<meta name="twitter:site" content="https://sulaeman.com/" />
-<meta name="twitter:creator" content="Sulaeman" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Migrasi data ke Amazon Elasticsearch Service :: Sulaeman — Mikir...">
-<meta property="og:description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari self-managed Elasticsearch cluster ke Amazon Elasticsearch Service.
- Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi Migrating to Amazon Elasticsearch Service dan tidak melanjutkan membaca langkah-langkah yang saya pakai.
- Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot." />
+<meta property="og:title" content="Migrasi data ke Amazon Elasticsearch Service">
+<meta property="og:description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari `self-managed Elasticsearch cluster` ke Amazon Elasticsearch Service. Mari lanjutkan membaca..." />
 <meta property="og:url" content="https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/" />
-<meta property="og:site_name" content="Migrasi data ke Amazon Elasticsearch Service" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Sulaeman" />
+
+  
+    <meta property="og:image" content="https://sulaeman.com/img/favicon/green.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2020-11-20 18:30:12 &#43;0700 WIB" />
+
+  <meta property="article:published_time" content="2020-11-20 18:30:12 &#43;0700 WIB" />
+
 
 
 
@@ -77,10 +90,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="">
+<body class="green">
 
 
-<div class="container center">
+<div class="container center headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -92,7 +105,9 @@ if (!doNotTrack) {
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -133,6 +148,8 @@ if (!doNotTrack) {
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -169,6 +186,7 @@ if (!doNotTrack) {
         <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -182,15 +200,13 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/">Migrasi data ke Amazon Elasticsearch Service</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2020-11-20
-    </span>
+    
+      <span class="post-date">
+        2020-11-20 
+      </span>
     
     
-    <span class="post-author">::
-      Sulaeman
-    </span>
+    <span class="post-author">:: Sulaeman</span>
     
   </div>
 
@@ -208,19 +224,21 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <p><img src="/img/AWS-ES-Domain-1.png" alt="AWS ES Domain"></p>
+  
+
+  <div class="post-content"><div>
+        <p><img src="/img/AWS-ES-Domain-1.png" alt="AWS ES Domain"></p>
 <p>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari <code>self-managed Elasticsearch cluster</code> ke Amazon Elasticsearch Service.</p>
 <blockquote>
 <p>Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/migration.html">Migrating to Amazon Elasticsearch Service</a> dan tidak melanjutkan membaca langkah-langkah yang saya pakai.</p>
 </blockquote>
 <p>Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke <code>AWS S3</code>, jika belum silahkan baca bagian <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/migration.html#migration-take-snapshot">Take and Upload the Snapshot</a>.</p>
-<h2 id="1-berikan-izin">1: Berikan izin</h2>
+<h2 id="1-berikan-izin">1: Berikan izin<a href="#1-berikan-izin" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <hr>
 <p>Kamu harus membuat sebuah <code>IAM Role</code> yang memiliki <code>policy</code> untuk memberikan izin Elasticsearch cluster ini untuk menggunakan snapshot yang sudah disiapkan didalam <code>AWS S3</code>.</p>
-<h4 id="11-buat-sebuah-iam-role">1.1: Buat sebuah <code>IAM Role</code></h4>
+<h4 id="11-buat-sebuah-iam-role">1.1: Buat sebuah <code>IAM Role</code><a href="#11-buat-sebuah-iam-role" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Pada bagian <code>Select type of trusted entity</code> pilih <code>AWS Service</code>. Kemudian pada bagian <code>Choose a use case</code> pilih saja <code>EC2</code> jika Elasticsearch tidak kamu temukan, karena nanti bisa kamu gubah.</p>
-<h4 id="12-attach-permissions-policies">1.2: Attach permissions policies</h4>
+<h4 id="12-attach-permissions-policies">1.2: Attach permissions policies<a href="#12-attach-permissions-policies" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Buat sebuah policy jika belum mempunyai, dengan isi sebagai berikut:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
@@ -251,9 +269,9 @@ if (!doNotTrack) {
 </blockquote>
 <p>Lanjutkan dengan memberi nama untuk policy ini, contohnya <code>AmazonS3ElasticsearchBackupAccess</code>, dan konfirmasi membuat policy-nya.</p>
 <p>Kembali ke halaman membuat <code>IAM Role</code> sebelumnya, klik tombol refresh sebelah kanan, dan cari nama policy yang tadi kamu buat, kemudian pilih dan lanjutkan.</p>
-<h4 id="13-review">1.3: Review</h4>
+<h4 id="13-review">1.3: Review<a href="#13-review" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Lanjutkan dengan memberi nama untuk role ini, contohnya <code>AmazonESSnapshotRole</code>, dan konfirmasi membuat role-nya.</p>
-<h4 id="14-trust-relationships">1.4: Trust relationships</h4>
+<h4 id="14-trust-relationships">1.4: Trust relationships<a href="#14-trust-relationships" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Jika sebelumnya kamu memilih <code>EC2</code> sebagai trusted entity dari AWS Service untuk role ini, maka kamu perlu menggubah <code>Trust relationships</code> dari role yang tadi dibuat, dengan masuk ke halaman detil role, pilih tab <code>Trust relationships</code>, klik tombol <code>Edit trust relationship</code>, kemudian ganti isinya sebagai berikut:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
@@ -268,7 +286,7 @@ if (!doNotTrack) {
   ]
 }
 </code></pre></div><p>Kemudian lanjutkan update.</p>
-<h4 id="15-berikan-izin-sebuah-user-atau-role">1.5: Berikan izin sebuah user atau role</h4>
+<h4 id="15-berikan-izin-sebuah-user-atau-role">1.5: Berikan izin sebuah user atau role<a href="#15-berikan-izin-sebuah-user-atau-role" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Izin untuk user atau role ini harus dibuat supaya Elasticsearch cluster dapat mengakses <code>AWS S3</code> memanfaatkan <code>IAM Role</code> yang tadi kamu buat.</p>
 <p>Izin ini saya perkirakan hanya untuk user atau role yang tidak mempunyai akses penuh terhadap semua <code>Action</code> dan <code>Resource</code> didalam akun AWS kamu. Jika mempunyai user atau role tersebut, saya perkirakan kamu dapat melewati bagian ini.</p>
 <p>Jika tidak, maka buat sebuah <code>Policy</code>, contoh nama <code>AmazonESSnapshotPassRole</code>, dengan permission sebagai berikut:</p>
@@ -283,17 +301,17 @@ if (!doNotTrack) {
   ]
 }
 </code></pre></div><p>Kemudian <code>Add permissions</code> dan pilih policy tadi terhadap sebuah user, atau role jika kamu sudah memahami pemakaian <code>IAM Role</code>.</p>
-<h4 id="16-konfigurasi-di-kibana">1.6: Konfigurasi di Kibana</h4>
+<h4 id="16-konfigurasi-di-kibana">1.6: Konfigurasi di Kibana<a href="#16-konfigurasi-di-kibana" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <blockquote>
 <p>Saya perkirakan jika kamu mengaktifkan <code>Fine–grained access control</code>, maka diperlukan konfigurasi di Kibana. Silahkan <code>coba</code> lewati bagian ini jika kamu tidak mengaktifkan.</p>
 </blockquote>
 <p>Masuk ke <code>Kibana</code> menggunakan kredensial <code>master user</code> yang kamu tentukan saat membuat Elasticsearch cluster ini. Kamu bisa menemukan URL Kibana di halaman <code>Overview</code>.</p>
 <p>Di Kibana, pilih <code>Security</code>, <code>Role Mappings</code>, dan <code>Add</code>. Untuk <code>Role</code>, pilih <code>manage_snapshots</code>. ARN untuk user masuk ke bagian <code>users</code>, dan ARN untuk role masuk ke bagian <code>Backend roles</code>. Langkah ini untuk memberikan izin <code>Fine–grained access control</code> menggunakan snapshot.</p>
 <p>Gunakan ARN user yang memiliki akses terhadap <code>AWS S3</code> dimana snapshot yang akan dipakai tersimpan. Kemudian gunakan ARN role <code>AmazonESSnapshotRole</code>.</p>
-<h2 id="2-restore-snapshot">2: Restore snapshot</h2>
+<h2 id="2-restore-snapshot">2: Restore snapshot<a href="#2-restore-snapshot" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <hr>
 <p>Sebelum memulai restore, kamu harus membuat sebuah konfigurasi repository didalam Elasticsearch cluster.</p>
-<h4 id="21-mendaftarkan-migration-repository">2.1: Mendaftarkan migration repository</h4>
+<h4 id="21-mendaftarkan-migration-repository">2.1: Mendaftarkan migration repository<a href="#21-mendaftarkan-migration-repository" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Untuk membuat sebuah konfigurasi repository, kamu harus menggunakan <code>IAM</code> kredensial yang memiliki akses terhadap Elasticsearch cluster, karena didalam konfigurasi itu mempunyai property <code>role_arn</code>.</p>
 <p>Jika Elasticsearch cluster berada didalam sebuah <code>VPC</code>, maka kamu hanya dapat mengaksesnya melalui AWS services yang berada didalam <code>VPC</code> yang sama, contohnya sebuah <code>Instance EC2</code>.</p>
 <p>Jadi silahkan tentukan melalui apa tergantung posisi Elasticsearch cluster kamu, didalam sebuah <code>VPC</code> atau tidak.</p>
@@ -320,7 +338,7 @@ https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_snapshot/migrat
 </code></pre><blockquote>
 <p>Value dari <code>--region</code> ganti dengan lokasi dimana Elasticsearch cluster dan AWS S3 kamu berada.</p>
 </blockquote>
-<h4 id="22-memilih-snapshot">2.2: Memilih snapshot</h4>
+<h4 id="22-memilih-snapshot">2.2: Memilih snapshot<a href="#22-memilih-snapshot" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Jika repository diatas berhasil dibuat, maka kamu bisa melihat daftar snapshot yang tersedia, bisa tetap menggunakan Postman atau <code>curl</code>.</p>
 <p>Jika kamu mengaktifkan <code>Fine–grained access control</code>, maka otentikasi <code>master user</code> harus digunakan pada bagian ini untuk mengakses Elasticsearch cluster, tergantung apakah memakai <code>IAM ARN</code>, atau <code>Create master user</code> yaitu terdapat username dan password.</p>
 <p>Jika memakai username dan password, maka kamu bisa menggunakan <code>HTTP basic authentication</code>.</p>
@@ -354,7 +372,7 @@ https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_snapshot/migrat
       <span style="color:#f92672">&#34;successful&#34;</span> : <span style="color:#ae81ff">20</span>
     }
   }]
-</code></pre></div><h4 id="23-restore-snapshot">2.3: Restore snapshot</h4>
+</code></pre></div><h4 id="23-restore-snapshot">2.3: Restore snapshot<a href="#23-restore-snapshot" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Masih memakai penjelasan poin diatas mengenai otentikasi. Kamu tentukan snapshot mana yang akan di-restore</p>
 <pre><code>curl -XPOST -u &quot;&lt;username&gt;:&lt;password&gt;&quot; \
 https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_snapshot/migration-repository/snap_6.3.2_20201120000501/_restore?wait_for_completion=true \
@@ -363,30 +381,32 @@ https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_snapshot/migrat
   &quot;indices&quot;: &quot;...&quot;,
   &quot;include_global_state&quot;: false
 }'
-</code></pre><h4 id="24-periksa-hasil-restore">2.4: Periksa hasil restore</h4>
+</code></pre><h4 id="24-periksa-hasil-restore">2.4: Periksa hasil restore<a href="#24-periksa-hasil-restore" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <pre><code>curl -XGET -u &quot;&lt;username&gt;:&lt;password&gt;&quot; \
 https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_cat/indices?v
 </code></pre>
-  </div>
+      </div></div>
+
   
-  <div class="pagination">
+  
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      
-      <span class="button next">
-        <a href="https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/">
-          <span class="button__text">Mencoba menggunakan layanan AWS Elasticsearch</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
+        
+        
+        <span class="button next">
+            <a href="https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/">
+                <span class="button__text">Mencoba menggunakan layanan AWS Elasticsearch</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
     </div>
-  </div>
+</div>
+
   
 
   
@@ -399,13 +419,18 @@ https://&lt;ganti_dengan_elasticsearch_domain_endpoint_kamu&gt;/_cat/indices?v
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">
+        <span>&copy; Sulaeman :: Powered by gohugo.io</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://sulaeman.com/assets/main.js"></script>
 <script src="https://sulaeman.com/assets/prism.js"></script>
+
+
 
 
 

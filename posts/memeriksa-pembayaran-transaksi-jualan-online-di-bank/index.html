@@ -2,15 +2,30 @@
 <html lang="en">
 <head>
   
-    <title>Memeriksa pembayaran transaksi jualan online di Bank :: Sulaeman — Mikir...</title>
+    <title>Memeriksa pembayaran transaksi jualan online di Bank :: Sulaeman</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
-Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel."/>
-<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
-<meta name="robots" content="noodp"/>
+Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel." />
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 <link rel="stylesheet" href="https://sulaeman.com/assets/style.css">
@@ -22,33 +37,33 @@ Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan l
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sulaeman.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="https://sulaeman.com/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
+  <link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Memeriksa pembayaran transaksi jualan online di Bank :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
-Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel." />
-<meta name="twitter:site" content="https://sulaeman.com/" />
-<meta name="twitter:creator" content="Sulaeman" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Memeriksa pembayaran transaksi jualan online di Bank :: Sulaeman — Mikir...">
-<meta property="og:description" content="Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan Magento 2 – Unique Grand Total extension.
-Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel." />
+<meta property="og:title" content="Memeriksa pembayaran transaksi jualan online di Bank">
+<meta property="og:description" content="Mencari Magento 2 extension untuk Social Login yang gratis, ketemu, ternyata tidak berfungsi dengan seharusnya, yaitu ada bug nya. Tetapi sedang dibutuhkan untuk website e-commerce. Akhirnya membuat sendiri saja" />
 <meta property="og:url" content="https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/" />
-<meta property="og:site_name" content="Memeriksa pembayaran transaksi jualan online di Bank" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Sulaeman" />
+
+  
+    <meta property="og:image" content="https://sulaeman.com/img/favicon/green.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2017-05-03 16:30:12 &#43;0700 WIB" />
+
+  <meta property="article:published_time" content="2017-05-03 16:30:12 &#43;0700 WIB" />
+
 
 
 
@@ -74,10 +89,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="">
+<body class="green">
 
 
-<div class="container center">
+<div class="container center headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -89,7 +104,9 @@ if (!doNotTrack) {
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -130,6 +147,8 @@ if (!doNotTrack) {
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -166,6 +185,7 @@ if (!doNotTrack) {
         <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -179,15 +199,13 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://sulaeman.com/posts/memeriksa-pembayaran-transaksi-jualan-online-di-bank/">Memeriksa pembayaran transaksi jualan online di Bank</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2017-05-03
-    </span>
+    
+      <span class="post-date">
+        2017-05-03 
+      </span>
     
     
-    <span class="post-author">::
-      Sulaeman
-    </span>
+    <span class="post-author">:: Sulaeman</span>
     
   </div>
 
@@ -201,40 +219,44 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <p><img src="/img/laravel-bank-statements-collector.jpg" alt="Memeriksa pembayaran transaksi jualan online di Bank"></p>
+  
+
+  <div class="post-content"><div>
+        <p><img src="/img/laravel-bank-statements-collector.jpg" alt="Memeriksa pembayaran transaksi jualan online di Bank"></p>
 <p>Ketika memiliki sebuah toko online sendiri, dimana bukan di sebuah marketplace, yaitu di website milik sendiri. Untuk membedakan pembayaran dari setiap pembeli sudah dilakukan, yaitu dengan menjadikan total pembayaran unik untuk setiap transaksi per hari nya. Sehingga tidak bingung ketika melihat daftar Credit yang masuk di e-banking dari pembeli yang telah melakukan konfirmasi pembayaran. Yaitu menggunakan <a href="/posts/magento-2-unique-grand-total-extension/">Magento 2 – Unique Grand Total extension</a>.</p>
 <p>Sekarang untuk mempermudah pemeriksaan pembayaran supaya tidak perlu melakukan login ke setiap e-banking yang dimiliki, maka saya membuat sebuah PHP package yang dapat digunakan pada framework Laravel.</p>
 <p>Karena tidak semua orang mempunyai waktu dan orang teknis untuk membuat hal serupa, maka saya jadikan open source saja di Github.</p>
 <p>Silahkan <a href="https://github.com/feelinc/laravel-bank-statements">klik</a> untuk melihat atau menggunakan modul nya.</p>
 
-  </div>
+      </div></div>
+
   
-  <div class="pagination">
+  
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Membuat Android library wrapper untuk React Native</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="https://sulaeman.com/posts/magento-2-social-login-extension/">
-          <span class="button__text">Magento 2 – Social Login extension</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
+        
+        <span class="button previous">
+            <a href="https://sulaeman.com/posts/membuat-android-library-wrapper-untuk-react-native/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Membuat Android library wrapper untuk React Native</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://sulaeman.com/posts/magento-2-social-login-extension/">
+                <span class="button__text">Magento 2 – Social Login extension</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
     </div>
-  </div>
+</div>
+
   
 
   
@@ -247,13 +269,18 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">
+        <span>&copy; Sulaeman :: Powered by gohugo.io</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://sulaeman.com/assets/main.js"></script>
 <script src="https://sulaeman.com/assets/prism.js"></script>
+
+
 
 
 

@@ -2,17 +2,32 @@
 <html lang="en">
 <head>
   
-    <title>Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman — Mikir...</title>
+    <title>Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
   Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya."/>
-<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
-<meta name="robots" content="noodp"/>
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 <link rel="stylesheet" href="https://sulaeman.com/assets/style.css">
@@ -24,37 +39,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sulaeman.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="https://sulaeman.com/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
+  <link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
- Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
-  Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
-<meta name="twitter:site" content="https://sulaeman.com/" />
-<meta name="twitter:creator" content="Sulaeman" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman — Mikir...">
-<meta property="og:description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
- Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
-  Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
+<meta property="og:title" content="Mount Partisi Amazon Web Service EBS Volume di EC2">
+<meta property="og:description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE - Volume, juga telah di Attach ke EC2 instance yang akan di pakai" />
 <meta property="og:url" content="https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/" />
-<meta property="og:site_name" content="Mount Partisi Amazon Web Service EBS Volume di EC2" />
-<meta property="og:image" content="">
+<meta property="og:site_name" content="Sulaeman" />
+
+  
+    <meta property="og:image" content="https://sulaeman.com/img/favicon/green.png">
+  
+
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2015-09-01 16:20:12 &#43;0700 WIB" />
+
+  <meta property="article:published_time" content="2015-09-01 16:20:12 &#43;0700 WIB" />
+
 
 
 
@@ -80,10 +91,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="">
+<body class="green">
 
 
-<div class="container center">
+<div class="container center headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -95,7 +106,9 @@ if (!doNotTrack) {
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -136,6 +149,8 @@ if (!doNotTrack) {
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -172,6 +187,7 @@ if (!doNotTrack) {
         <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -185,15 +201,13 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/">Mount Partisi Amazon Web Service EBS Volume di EC2</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2015-09-01
-    </span>
+    
+      <span class="post-date">
+        2015-09-01 
+      </span>
     
     
-    <span class="post-author">::
-      Sulaeman
-    </span>
+    <span class="post-author">:: Sulaeman</span>
     
   </div>
 
@@ -209,8 +223,10 @@ if (!doNotTrack) {
 
   
 
-  <div class="post-content">
-    <p><img src="/img/EBS-Volume-List.png" alt="EBS Volume List"></p>
+  
+
+  <div class="post-content"><div>
+        <p><img src="/img/EBS-Volume-List.png" alt="EBS Volume List"></p>
 <p>Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.</p>
 <blockquote>
 <p>Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.</p>
@@ -257,26 +273,28 @@ if (!doNotTrack) {
 <p>Selesai.</p>
 <p>Selanjutnya Anda dapat memasang MySQL / MariaDB / Web Data pada volume EBS berbeda dari Root. Sehingga jika OS bermasalah, Anda akan dengan mudah memindahkan volume tersebut ke EC2 cadangan atau lainnya.</p>
 
-  </div>
+      </div></div>
+
   
-  <div class="pagination">
+  
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat</span>
-        </a>
-      </span>
-      
-      
+        
+        <span class="button previous">
+            <a href="https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat</span>
+            </a>
+        </span>
+        
+        
     </div>
-  </div>
+</div>
+
   
 
   
@@ -289,13 +307,18 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">
+        <span>&copy; Sulaeman :: Powered by gohugo.io</span>
     
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
   </div>
 </footer>
 
 <script src="https://sulaeman.com/assets/main.js"></script>
 <script src="https://sulaeman.com/assets/prism.js"></script>
+
+
 
 
 
