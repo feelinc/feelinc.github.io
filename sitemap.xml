@@ -4,55 +4,55 @@
   
   <url>
     <loc>https://sulaeman.com/tags/cloud/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/tags/learning/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/posts/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/tags/server/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/</loc>
-    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sulaeman.com/tags/</loc>
+    <lastmod>2020-11-20T18:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</loc>
     <lastmod>2020-11-20T17:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

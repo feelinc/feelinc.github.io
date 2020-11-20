@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Fri, 20 Nov 2020 17:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2020 18:30:12 +0700</lastBuildDate>
     
 	<atom:link href="https://sulaeman.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Migrasi data ke Amazon Elasticsearch Service</title>
+      <link>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</link>
+      <pubDate>Fri, 20 Nov 2020 18:30:12 +0700</pubDate>
+      
+      <guid>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</guid>
+      <description>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari self-managed Elasticsearch cluster ke Amazon Elasticsearch Service.
+ Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi Migrating to Amazon Elasticsearch Service dan tidak melanjutkan membaca langkah-langkah yang saya pakai.
+ Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot.</description>
+    </item>
     
     <item>
       <title>Mencoba menggunakan layanan AWS Elasticsearch</title>
@@ -20,17 +31,6 @@
       <guid>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</guid>
       <description>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah self-managed Elasticsearch cluster. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari self-managed Elasticsearch cluster ke AWS Elasticsearch Service
 1: Membuat Elasticsearch domain  Pertama kali kamu harus membuat sebuah Elasticsearch domain. Domain ini adalah sebuah cluster yang nanti memiliki data nodes dan master nodes.</description>
-    </item>
-    
-    <item>
-      <title>Migrasi data ke Amazon Elasticsearch Service</title>
-      <link>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</link>
-      <pubDate>Fri, 20 Nov 2020 17:30:12 +0700</pubDate>
-      
-      <guid>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</guid>
-      <description>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk melakukan migrasi data dari self-managed Elasticsearch cluster ke Amazon Elasticsearch Service.
- Langkah-langkah ini berdasarkan pengalaman pribadi melakukan migrasi dengan acuan panduan dokumentasi-dokumentasi dari AWS. Kamu bisa membaca dokumentasi Migrating to Amazon Elasticsearch Service dan tidak melanjutkan membaca langkah-langkah yang saya pakai.
- Pastinya kamu harus membuat atau memiliki snapshot yang akan dimigrasi, dan diupload ke AWS S3, jika belum silahkan baca bagian Take and Upload the Snapshot.</description>
     </item>
     
     <item>
