@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
-Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya."/>
+  Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/" />
@@ -34,8 +34,8 @@ Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh bia
 <meta name="twitter:title" content="Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman — Mikir..." />
 <meta name="twitter:description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
-Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
+  Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -46,8 +46,8 @@ Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh bia
 <meta property="og:title" content="Mount Partisi Amazon Web Service EBS Volume di EC2 :: Sulaeman — Mikir...">
 <meta property="og:description" content="Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&amp;gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.
  Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.
-Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
+  Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya." />
 <meta property="og:url" content="https://sulaeman.com/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2/" />
 <meta property="og:site_name" content="Mount Partisi Amazon Web Service EBS Volume di EC2" />
 <meta property="og:image" content="">
@@ -210,75 +210,51 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/EBS-Volume-List.png" alt="EBS Volume List" /></p>
-
+    <p><img src="/img/EBS-Volume-List.png" alt="EBS Volume List"></p>
 <p>Saya harap EBS volume yang akan di mount dan partisi sudah tersedia pada daftar ELASTIC BLOCK STORE -&gt; Volume, juga telah di Attach ke EC2 instance yang akan di pakai, seperti yang terlihat pada gambar di atas.</p>
-
 <blockquote>
 <p>Pastikan EBS volume yang dibuat berada di Zona yang sama dengan EC2 yang akan di pakai.</p>
-
+</blockquote>
+<blockquote>
 <p>Silahkan attach EBS volume nya ke EC2 instance yang akan di pakai.</p>
-
+</blockquote>
+<blockquote>
 <p>Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.</p>
-
+</blockquote>
+<blockquote>
 <p>Linux Device tersebut akan terlihat sebagai /dev/xvdb atau /dev/xvdf pada console EC2 Anda.</p>
 </blockquote>
-
 <p>Selanjutnya, setelah Anda telah masuk ke console EC2 instance, gunakan perintah – perintah berikut ini:</p>
-
-<p><code>sudo fdisk -l</code></p>
-
+<p><!-- raw HTML omitted -->sudo fdisk -l<!-- raw HTML omitted --></p>
 <p>Maka akan terlihat tampilan seperti berikut:
-<img src="/img/sudo-fdisk-l.jpg" alt="sudo fdisk-l" /></p>
-
-<hr />
-
+<img src="/img/sudo-fdisk-l.jpg" alt="sudo fdisk-l"></p>
+<hr>
 <p>Selanjutnya, lakukan partisi:</p>
-
-<p><code>sudo fdisk /dev/xvdf</code></p>
-
+<p><!-- raw HTML omitted -->sudo fdisk /dev/xvdf<!-- raw HTML omitted --></p>
 <p>Kemudian ikut seperti tampilan berikut:
-<img src="/img/sudo-fdisk.jpg" alt="sudo fdisk /dev/xvdf" />
-&gt; [*] Yang di tandai merah adalah huruf yang harus Anda ketik, dan tanda panah kosongkan dan enter.</p>
-
-<hr />
-
+<img src="/img/sudo-fdisk.jpg" alt="sudo fdisk /dev/xvdf"></p>
+<blockquote>
+<p>[*] Yang di tandai merah adalah huruf yang harus Anda ketik, dan tanda panah kosongkan dan enter.</p>
+</blockquote>
+<hr>
 <p>Gunakan perintah partprobe supaya kernel mengetahui mengenai perubahan pada sistem.</p>
-
-<p><code>sudo partprobe /dev/xvdf</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo partprobe /dev/xvdf<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, buat volume pada partisi tadi menggunakan XFS format. Tambahkan angka “1” pada device name nya:</p>
-
-<p><code>sudo mkfs.xfs /dev/xvdf1 -f -n ftype=1</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo mkfs.xfs /dev/xvdf1 -f -n ftype=1<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, buat directory dimana Anda mount volume yang telah di buat, contoh:</p>
-
-<p><code>sudo mkdir /mnt/data</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo mkdir /mnt/data<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, kita mount volume tadi:</p>
-
-<p><code>sudo mount /dev/xvdf1 /mnt/data -t xfs</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo mount /dev/xvdf1 /mnt/data -t xfs<!-- raw HTML omitted --></p>
+<hr>
 <p>Supaya ketika server di nyalakan ulang (reboot) volume akan mount secara langsung, maka tambahkan pada fstab :</p>
-
-<p><code>sudo vi /etc/fstab</code></p>
-
-<p><code>/dev/xvdf1 /mnt/data xfs noatime 1 1</code></p>
-
-<p><code>sudo mount -a</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo vi /etc/fstab<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->/dev/xvdf1 /mnt/data xfs noatime 1 1<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->sudo mount -a<!-- raw HTML omitted --></p>
+<hr>
 <p>Selesai.</p>
-
 <p>Selanjutnya Anda dapat memasang MySQL / MariaDB / Web Data pada volume EBS berbeda dari Root. Sehingga jika OS bermasalah, Anda akan dengan mudah memindahkan volume tersebut ke EC2 cadangan atau lainnya.</p>
 
   </div>
@@ -313,7 +289,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

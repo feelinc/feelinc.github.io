@@ -204,45 +204,32 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/create-react-native-library.png" alt="Membuat Android library wrapper untuk React Native" /></p>
-
+    <p><img src="/img/create-react-native-library.png" alt="Membuat Android library wrapper untuk React Native"></p>
 <blockquote>
 <p>Pasti manfaat React Native sudah mengerti ya buat apa, kalau belum, silahkan googling dulu gan/sis 🙂</p>
 </blockquote>
-
 <p>Membuat aplikasi untuk Android sangat mudah menggunakan React Native bagi yang berpengalaman menggunakan JavaScript. Tetapi tidak semua komponen untuk Android tersedia. Karena bayangkan saja React Native itu seperti sebuah library yang menghubungkan antara Android native code dan JavaScript. Sehingga semua komponen yang kini tersedia atau bisa digunakan pada Android melalui React Native sebenernya sudah disediakan atau dibungkus (wrapper) oleh para kontributor React Native.</p>
-
 <p>Berarti jika sebuah komponen yang dibutuhkan tidak tersedia di React Native, maka harus membuat sendiri. Contoh jika ingin mengimplementasi pembayaran menggunakan Paypal pada aplikasi Android. Sebenarnya Paypal sudah menyediakan SDK khusus Android, tetapi masih berupa library native, belum dibungkus untuk dapat digunakan pada React Native.</p>
-
 <p>Sekarang mari kita coba membuat Android library wrapper React Native untuk mengimplementasi Paypal Android SDK.</p>
-
-<h2>1. Requirement</h2>
-
+<!-- raw HTML omitted -->
 <ul>
 <li>Tools untuk membuat aplikasi Android (Android Studio, dan sebagainya) pastikan semua berfungsi.</li>
 <li>Sebuah aplikasi basic yang dibuat menggunakan React Native, pastikan berfungsi.</li>
 <li>Koneksi internet.</li>
 </ul>
-
-<h2>2. Preparation</h2>
-
+<!-- raw HTML omitted -->
 <ul>
 <li>Install library <a href="https://github.com/frostney/react-native-create-library">https://github.com/frostney/react-native-create-library</a> menggunakan NPM.</li>
-<li>Buat sebuah basic library menggunakan library tadi, contoh <code>PaypalWrapper</code>.</li>
+<li>Buat sebuah basic library menggunakan library tadi, contoh <!-- raw HTML omitted -->PaypalWrapper<!-- raw HTML omitted -->.</li>
 </ul>
-
-<p><img src="/img/create-react-native-library-1.jpg" alt="" /></p>
-
+<p><img src="/img/create-react-native-library-1.jpg" alt=""></p>
 <ul>
 <li>Basic library yang telah dibuat barusan akan memiliki struktur seperti gambar dibawah.</li>
 </ul>
-
-<p><img src="/img/create-react-native-library-2.jpg" alt="" /></p>
-
+<p><img src="/img/create-react-native-library-2.jpg" alt=""></p>
 <ul>
 <li>Kemudian install React Native menggunakan NPM didalam folder library tadi. Hasilnya akan mendapatkan folder “node_modules” baru seperti pada gambar dibawah.</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -250,21 +237,16 @@ if (!doNotTrack) {
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td><img src="/img/create-react-native-library-3.jpg" alt="" /></td>
-<td><img src="/img/create-react-native-library-4.jpg" alt="" /></td>
+<td><img src="/img/create-react-native-library-3.jpg" alt=""></td>
+<td><img src="/img/create-react-native-library-4.jpg" alt=""></td>
 </tr>
 </tbody>
 </table>
-
-<h2>3. Coding Preparation</h2>
-
-<p>Sekarang ganti terlebih dahulu nama package Android nya. Yaitu dengan membuka file <code>android/src/main/java/AndroidManifest.xml</code>. Ganti <code>com.reactlibrary</code> menjadi <code>com.namasaya.RNPaypalWrapper</code>. Silahkan ganti <code>namasaya</code> terserah.</p>
-
-<p>Kemudian ganti struktur folder nya seperti di gambar dibawah. Menjadi seperti di gambar setelahnya. Mengganti nama <code>reactlibrary</code> menjadi <code>RNPaypalWrapper</code> dan masukan ke folder <code>namasaya</code>.</p>
-
+<!-- raw HTML omitted -->
+<p>Sekarang ganti terlebih dahulu nama package Android nya. Yaitu dengan membuka file <!-- raw HTML omitted -->android/src/main/java/AndroidManifest.xml<!-- raw HTML omitted -->. Ganti <!-- raw HTML omitted -->com.reactlibrary<!-- raw HTML omitted --> menjadi <!-- raw HTML omitted -->com.namasaya.RNPaypalWrapper<!-- raw HTML omitted -->. Silahkan ganti <!-- raw HTML omitted -->namasaya<!-- raw HTML omitted --> terserah.</p>
+<p>Kemudian ganti struktur folder nya seperti di gambar dibawah. Menjadi seperti di gambar setelahnya. Mengganti nama <!-- raw HTML omitted -->reactlibrary<!-- raw HTML omitted --> menjadi <!-- raw HTML omitted -->RNPaypalWrapper<!-- raw HTML omitted --> dan masukan ke folder <!-- raw HTML omitted -->namasaya<!-- raw HTML omitted -->.</p>
 <table>
 <thead>
 <tr>
@@ -272,164 +254,110 @@ if (!doNotTrack) {
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td><img src="/img/create-react-native-library-5.jpg" alt="" /></td>
-<td><img src="/img/create-react-native-library-6.jpg" alt="" /></td>
+<td><img src="/img/create-react-native-library-5.jpg" alt=""></td>
+<td><img src="/img/create-react-native-library-6.jpg" alt=""></td>
 </tr>
 </tbody>
 </table>
-
-<p>Kemudian ganti <code>package com.reactlibrary</code> menjadi <code>package com.namasaya.RNPaypalWrapper</code> didalam semua file .java yang ada didalam folder <code>RNPaypalWrapper</code> tadi.</p>
-
-<p>Kemudian buka folder library <code>android</code> menggunakan Android Studio. Setelah terbuka, biarkan Gradle melakukan pekerjaannya sampai selesai, akan terlihat progress bar dibawah Android Studio.</p>
-
-<p>Kemudian buka <code>Gradle Scripts -&gt; build.gradle</code> di Android Studio. Set konfigurasi untuk menambahkan React Native sebagai salah satu dependency, seperti terlihat pada gambar dibawah.</p>
-
-<p><img src="/img/create-react-native-library-7.jpg" alt="" /></p>
-
-<p>Maka akan muncul notifikasi <code>Gradle files have changed since….</code>, maka klik saja link <code>Sync..</code>, dan biarkan gradle bekerja kembali sampai selesai.</p>
-
+<p>Kemudian ganti <!-- raw HTML omitted -->package com.reactlibrary<!-- raw HTML omitted --> menjadi <!-- raw HTML omitted -->package com.namasaya.RNPaypalWrapper<!-- raw HTML omitted --> didalam semua file .java yang ada didalam folder <!-- raw HTML omitted -->RNPaypalWrapper<!-- raw HTML omitted --> tadi.</p>
+<p>Kemudian buka folder library <!-- raw HTML omitted -->android<!-- raw HTML omitted --> menggunakan Android Studio. Setelah terbuka, biarkan Gradle melakukan pekerjaannya sampai selesai, akan terlihat progress bar dibawah Android Studio.</p>
+<p>Kemudian buka <!-- raw HTML omitted -->Gradle Scripts -&gt; build.gradle<!-- raw HTML omitted --> di Android Studio. Set konfigurasi untuk menambahkan React Native sebagai salah satu dependency, seperti terlihat pada gambar dibawah.</p>
+<p><img src="/img/create-react-native-library-7.jpg" alt=""></p>
+<p>Maka akan muncul notifikasi <!-- raw HTML omitted -->Gradle files have changed since….<!-- raw HTML omitted -->, maka klik saja link <!-- raw HTML omitted -->Sync..<!-- raw HTML omitted -->, dan biarkan gradle bekerja kembali sampai selesai.</p>
 <p>Kemudian lanjutkan konfigurasi untuk menambahkan Paypal Android SDK. Masih didalam “build.gradle”, tambahkan seperti terlihat pada gambar dibawah.</p>
-
-<p><img src="/img/create-react-native-library-8.jpg" alt="" /></p>
-
-<p>Selanjutnya lakukan kembali <code>Sync…</code> untuk gradle, dan biarkan gradle bekerja sampai selesai.</p>
-
-<h2>4. Coding</h2>
-
-<p>Karena native library wrapper ini sederhana, maka coding yang akan dilakukan hanya pada file <code>RNPaypalWrapperModule.java</code> saja.</p>
-
+<p><img src="/img/create-react-native-library-8.jpg" alt=""></p>
+<p>Selanjutnya lakukan kembali <!-- raw HTML omitted -->Sync…<!-- raw HTML omitted --> untuk gradle, dan biarkan gradle bekerja sampai selesai.</p>
+<!-- raw HTML omitted -->
+<p>Karena native library wrapper ini sederhana, maka coding yang akan dilakukan hanya pada file <!-- raw HTML omitted -->RNPaypalWrapperModule.java<!-- raw HTML omitted --> saja.</p>
 <p>Isi dari file tersebut dapat dilihat pada Gist berikut : <a href="https://gist.github.com/feelinc/e29a11f3b19a6e2c848f9a01826e1a65">https://gist.github.com/feelinc/e29a11f3b19a6e2c848f9a01826e1a65</a></p>
-
-<h4>Very Basic Coding Explanation</h4>
-
+<!-- raw HTML omitted -->
 <ul>
-<li><strong>Constant</strong></li>
+<li><!-- raw HTML omitted -->Constant<!-- raw HTML omitted --></li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">public</span> Map <span style="color:#a6e22e">getConstants</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">final</span> Map constants <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>NO_NETWORK<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">,</span> PayPalConfiguration<span style="color:#f92672">.</span><span style="color:#a6e22e">ENVIRONMENT_NO_NETWORK</span><span style="color:#f92672">);</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>SANDBOX<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">,</span> PayPalConfiguration<span style="color:#f92672">.</span><span style="color:#a6e22e">ENVIRONMENT_SANDBOX</span><span style="color:#f92672">);</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>PRODUCTION<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">,</span> PayPalConfiguration<span style="color:#f92672">.</span><span style="color:#a6e22e">ENVIRONMENT_PRODUCTION</span><span style="color:#f92672">);</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ERROR_USER_CANCELLED<span style="color:#f92672">,</span> ERROR_USER_CANCELLED<span style="color:#f92672">);</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ERROR_INVALID_CONFIG<span style="color:#f92672">,</span> ERROR_INVALID_CONFIG<span style="color:#f92672">);</span>
+    constants<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ERROR_INTERNAL_ERROR<span style="color:#f92672">,</span> ERROR_INTERNAL_ERROR<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> constants<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Pada bagian diatas adalah mengdefinisikan beberapa constant yang dapat digunakan oleh JavaScript dalam aplikasi yang dibuat menggunakan React Native. Contoh nya :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PaypalWrapper</span> <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span><span style="color:#a6e22e">paypal</span><span style="color:#f92672">-</span><span style="color:#a6e22e">wrapper</span><span style="color:#960050;background-color:#1e0010">’</span>
 
-<pre><code class="language-java">@Override
-public Map getConstants() {
-    final Map constants = new HashMap();
-    constants.put(“NO_NETWORK”, PayPalConfiguration.ENVIRONMENT_NO_NETWORK);
-    constants.put(“SANDBOX”, PayPalConfiguration.ENVIRONMENT_SANDBOX);
-    constants.put(“PRODUCTION”, PayPalConfiguration.ENVIRONMENT_PRODUCTION);
-    constants.put(ERROR_USER_CANCELLED, ERROR_USER_CANCELLED);
-    constants.put(ERROR_INVALID_CONFIG, ERROR_INVALID_CONFIG);
-    constants.put(ERROR_INTERNAL_ERROR, ERROR_INTERNAL_ERROR);
-    return constants;
-}
-</code></pre>
-
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">SANDBOX</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">ERROR_USER_CANCELLED</span>)
+</code></pre></div><ul>
+<li><!-- raw HTML omitted -->Method<!-- raw HTML omitted --></li>
+</ul>
 <p>Pada bagian diatas adalah mengdefinisikan beberapa constant yang dapat digunakan oleh JavaScript dalam aplikasi yang dibuat menggunakan React Native. Contoh nya :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@ReactMethod</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initialize</span><span style="color:#f92672">(</span>String environment<span style="color:#f92672">,</span> String clientId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    config <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PayPalConfiguration<span style="color:#f92672">().</span><span style="color:#a6e22e">environment</span><span style="color:#f92672">(</span>environment<span style="color:#f92672">).</span><span style="color:#a6e22e">clientId</span><span style="color:#f92672">(</span>clientId<span style="color:#f92672">);</span>
 
-<pre><code class="language-javascript">import PaypalWrapper from ‘react-native-paypal-wrapper’
+    Intent intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">(</span>reactContext<span style="color:#f92672">,</span> PayPalService<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+    intent<span style="color:#f92672">.</span><span style="color:#a6e22e">putExtra</span><span style="color:#f92672">(</span>PayPalService<span style="color:#f92672">.</span><span style="color:#a6e22e">EXTRA_PAYPAL_CONFIGURATION</span><span style="color:#f92672">,</span> config<span style="color:#f92672">);</span>
+    reactContext<span style="color:#f92672">.</span><span style="color:#a6e22e">startService</span><span style="color:#f92672">(</span>intent<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Pada bagian diatas adalah mengdefinisikan sebuah method yang dapat digunakan oleh JavaScript dalam aplikasi yang dibuat menggunakan React Native. Contoh nya :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PaypalWrapper</span> <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span><span style="color:#a6e22e">paypal</span><span style="color:#f92672">-</span><span style="color:#a6e22e">wrapper</span><span style="color:#960050;background-color:#1e0010">’</span>
 
-console.log(PaypalWrapper.SANDBOX)
-console.log(PaypalWrapper.ERROR_USER_CANCELLED)
-</code></pre>
-
+<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">initialize</span>(<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">SANDBOX</span>, <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">xxxxxx</span><span style="color:#960050;background-color:#1e0010">’</span>)
+</code></pre></div><p>Perbedaan dengan method lain adalah, method yang dapat digunakan oleh JavaScript memiliki <!-- raw HTML omitted -->@ReactMethod<!-- raw HTML omitted --> diatasnya, disebut annotations.</p>
+<!-- raw HTML omitted -->
+<p>Sekarang library tadi akan diimplementasi pada sebuah aplikasi React Native. Sebelumnya buang dulu bagian dibawah didalam <!-- raw HTML omitted -->build.gradle<!-- raw HTML omitted --> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">maven <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// All of React Native (JS, Android binaries) is installed from npm
+</span><span style="color:#75715e"></span>    url <span style="color:#960050;background-color:#1e0010">“</span>$rootDir<span style="color:#f92672">/../</span>node_modules<span style="color:#f92672">/</span>react<span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">/</span>android<span style="color:#960050;background-color:#1e0010">”</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Kemudian ganti dependencies <!-- raw HTML omitted -->react-native<!-- raw HTML omitted --> seperti dibawah. Karena sebelumnya menggunakan versi <!-- raw HTML omitted -->0.45.1<!-- raw HTML omitted -->, maka nanti akan mengikuti versi yang digunakan oleh aplikasi React Native yang tersedia. Jika ternyata tidak cocok, maka harap sesuaikan versi React Native nya dengan yang dibutuhkan oleh library ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">dependencies <span style="color:#f92672">{</span>
+    compile <span style="color:#960050;background-color:#1e0010">‘</span>com<span style="color:#f92672">.</span><span style="color:#a6e22e">facebook</span><span style="color:#f92672">.</span><span style="color:#a6e22e">react</span><span style="color:#f92672">:</span>react<span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">:+</span><span style="color:#960050;background-color:#1e0010">’</span>
+    compile <span style="color:#960050;background-color:#1e0010">‘</span>com<span style="color:#f92672">.</span><span style="color:#a6e22e">paypal</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sdk</span><span style="color:#f92672">:</span>paypal<span style="color:#f92672">-</span>android<span style="color:#f92672">-</span>sdk<span style="color:#f92672">:</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">15</span><span style="color:#f92672">.</span><span style="color:#a6e22e">3</span><span style="color:#960050;background-color:#1e0010">’</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Sehingga tidak terjadi konflik ketika melakukan build di aplikasi React Native.</p>
 <ul>
-<li><strong>Method</strong></li>
+<li>Buat folder <!-- raw HTML omitted -->react-native-paypal-wrapper<!-- raw HTML omitted --> didalam folder <!-- raw HTML omitted -->node_modules<!-- raw HTML omitted --> pada aplikasi React Native yang sudah tersedia.</li>
+<li>Kemudian copy semua isi dari folder <!-- raw HTML omitted -->PaypalWrapper<!-- raw HTML omitted -->, kedalam folder <!-- raw HTML omitted -->react-native-paypal-wrapper<!-- raw HTML omitted -->. Kecuali folder <!-- raw HTML omitted -->node_modules<!-- raw HTML omitted -->.</li>
+<li>Buka folder <!-- raw HTML omitted -->android<!-- raw HTML omitted --> pada aplikasi React Native yang tersedia menggunakan Android Studio.</li>
+<li>Buka file <!-- raw HTML omitted -->settings.gradle<!-- raw HTML omitted --> di Android Studio, kemudian tambahkan baris dibawah</li>
 </ul>
-
-<p>Pada bagian diatas adalah mengdefinisikan beberapa constant yang dapat digunakan oleh JavaScript dalam aplikasi yang dibuat menggunakan React Native. Contoh nya :</p>
-
-<pre><code class="language-java">@ReactMethod
-public void initialize(String environment, String clientId) {
-    config = new PayPalConfiguration().environment(environment).clientId(clientId);
-
-    Intent intent = new Intent(reactContext, PayPalService.class);
-    intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
-    reactContext.startService(intent);
-}
-</code></pre>
-
-<p>Pada bagian diatas adalah mengdefinisikan sebuah method yang dapat digunakan oleh JavaScript dalam aplikasi yang dibuat menggunakan React Native. Contoh nya :</p>
-
-<pre><code class="language-javascript">import PaypalWrapper from ‘react-native-paypal-wrapper’
-
-PaypalWrapper.initialize(PaypalWrapper.SANDBOX, ‘xxxxxx’)
-</code></pre>
-
-<p>Perbedaan dengan method lain adalah, method yang dapat digunakan oleh JavaScript memiliki <code>@ReactMethod</code> diatasnya, disebut annotations.</p>
-
-<h2>5. Deploy</h2>
-
-<p>Sekarang library tadi akan diimplementasi pada sebuah aplikasi React Native. Sebelumnya buang dulu bagian dibawah didalam <code>build.gradle</code> :</p>
-
-<pre><code class="language-java">maven {
-    // All of React Native (JS, Android binaries) is installed from npm
-    url “$rootDir/../node_modules/react-native/android”
-}
-</code></pre>
-
-<p>Kemudian ganti dependencies <code>react-native</code> seperti dibawah. Karena sebelumnya menggunakan versi <code>0.45.1</code>, maka nanti akan mengikuti versi yang digunakan oleh aplikasi React Native yang tersedia. Jika ternyata tidak cocok, maka harap sesuaikan versi React Native nya dengan yang dibutuhkan oleh library ini.</p>
-
-<pre><code class="language-java">dependencies {
-    compile ‘com.facebook.react:react-native:+’
-    compile ‘com.paypal.sdk:paypal-android-sdk:2.15.3’
-}
-</code></pre>
-
-<p>Sehingga tidak terjadi konflik ketika melakukan build di aplikasi React Native.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">include <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#f92672">:</span>react<span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span>paypal<span style="color:#f92672">-</span>wrapper<span style="color:#960050;background-color:#1e0010">’</span>
+project<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#f92672">:</span>react<span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span>paypal<span style="color:#f92672">-</span>wrapper<span style="color:#960050;background-color:#1e0010">’</span><span style="color:#f92672">).</span><span style="color:#a6e22e">projectDir</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>rootProject<span style="color:#f92672">.</span><span style="color:#a6e22e">projectDir</span><span style="color:#f92672">,</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#f92672">../</span>node_modules<span style="color:#f92672">/</span>react<span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span>paypal<span style="color:#f92672">-</span>wrapper<span style="color:#f92672">/</span>android<span style="color:#960050;background-color:#1e0010">’</span><span style="color:#f92672">)</span>
+</code></pre></div><ul>
+<li>Selanjutnya lakukan kembali <!-- raw HTML omitted -->Sync…<!-- raw HTML omitted --> untuk gradle, dan biarkan gradle bekerja sampai selesai.</li>
+<li>Buka file <!-- raw HTML omitted -->android/app/build.gradle<!-- raw HTML omitted --> di Android Studio, kemudian tambahkan baris seperti terlihat pada gambar dibawah yang ditandai garis merah.</li>
+</ul>
+<p><img src="/img/create-react-native-library-9.jpg" alt=""></p>
 <ul>
-<li>Buat folder <code>react-native-paypal-wrapper</code> didalam folder <code>node_modules</code> pada aplikasi React Native yang sudah tersedia.</li>
-<li>Kemudian copy semua isi dari folder <code>PaypalWrapper</code>, kedalam folder <code>react-native-paypal-wrapper</code>. Kecuali folder <code>node_modules</code>.</li>
-<li>Buka folder <code>android</code> pada aplikasi React Native yang tersedia menggunakan Android Studio.</li>
-<li>Buka file <code>settings.gradle</code> di Android Studio, kemudian tambahkan baris dibawah</li>
+<li>Selanjutnya lakukan kembali <!-- raw HTML omitted -->Sync…<!-- raw HTML omitted --> untuk gradle, dan biarkan gradle bekerja sampai selesai.</li>
+<li>Buka file <!-- raw HTML omitted -->MainApplication.java<!-- raw HTML omitted --> di Android Studio, kemudian tambahkan baris seperti terlihat pada gambar dibawah yang ditandai garis merah.</li>
 </ul>
-
-<pre><code class="language-java">include ‘:react-native-paypal-wrapper’
-project(‘:react-native-paypal-wrapper’).projectDir = new File(rootProject.projectDir, ‘../node_modules/react-native-paypal-wrapper/android’)
-</code></pre>
-
-<ul>
-<li>Selanjutnya lakukan kembali <code>Sync…</code> untuk gradle, dan biarkan gradle bekerja sampai selesai.</li>
-<li>Buka file <code>android/app/build.gradle</code> di Android Studio, kemudian tambahkan baris seperti terlihat pada gambar dibawah yang ditandai garis merah.</li>
-</ul>
-
-<p><img src="/img/create-react-native-library-9.jpg" alt="" /></p>
-
-<ul>
-<li>Selanjutnya lakukan kembali <code>Sync…</code> untuk gradle, dan biarkan gradle bekerja sampai selesai.</li>
-<li>Buka file <code>MainApplication.java</code> di Android Studio, kemudian tambahkan baris seperti terlihat pada gambar dibawah yang ditandai garis merah.</li>
-</ul>
-
-<p><img src="/img/create-react-native-library-10.jpg" alt="" /></p>
-
-<h2>6. Usage</h2>
-
-<p>Sekarang coba pakai library yang telah diimplementasikan dalam React Native JavaScript. Pastikan terlebih dahulu Packager (<code>npm start</code>) dan Android Virtual Device atau Device (terdeteksi di adb devices) sudah berjalan.</p>
-
+<p><img src="/img/create-react-native-library-10.jpg" alt=""></p>
+<!-- raw HTML omitted -->
+<p>Sekarang coba pakai library yang telah diimplementasikan dalam React Native JavaScript. Pastikan terlebih dahulu Packager (<!-- raw HTML omitted -->npm start<!-- raw HTML omitted -->) dan Android Virtual Device atau Device (terdeteksi di adb devices) sudah berjalan.</p>
 <p>Jalankan perintah dibawah didalam folder aplikasi React Native tadi.</p>
-
-<p><code>react-native run-android</code></p>
-
+<p><!-- raw HTML omitted -->react-native run-android<!-- raw HTML omitted --></p>
 <p>Buka komponen utama aplikasi React Native tadi menggunakan code editor. Kemudian import library tadi.</p>
-
-<pre><code class="language-javascript">import PaypalWrapper from ‘react-native-paypal-wrapper’
-</code></pre>
-
-<p>Sekarang tinggal digunakan. Contoh digunakan pada <code>componentDidMount</code> :</p>
-
-<pre><code class="language-javascript">componentDidMount () {
-	const clientId = ‘xxxxxxxxxx’
-	PaypalWrapper.initialize(PaypalWrapper.SANDBOX, clientId)
-	PaypalWrapper.pay({
-		total: ‘20.99’,
-		currency: ‘USD’,
-		description: ‘Cart’
-	}).then(response =&gt; console.log(response))
-	.catch(error =&gt; console.log(error))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PaypalWrapper</span> <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#f92672">-</span><span style="color:#66d9ef">native</span><span style="color:#f92672">-</span><span style="color:#a6e22e">paypal</span><span style="color:#f92672">-</span><span style="color:#a6e22e">wrapper</span><span style="color:#960050;background-color:#1e0010">’</span>
+</code></pre></div><p>Sekarang tinggal digunakan. Contoh digunakan pada <!-- raw HTML omitted -->componentDidMount<!-- raw HTML omitted --> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">componentDidMount</span> () {
+	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clientId</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">xxxxxxxxxx</span><span style="color:#960050;background-color:#1e0010">’</span>
+	<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">initialize</span>(<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">SANDBOX</span>, <span style="color:#a6e22e">clientId</span>)
+	<span style="color:#a6e22e">PaypalWrapper</span>.<span style="color:#a6e22e">pay</span>({
+		<span style="color:#a6e22e">total</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#ae81ff">20.99</span><span style="color:#960050;background-color:#1e0010">’</span>,
+		<span style="color:#a6e22e">currency</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">USD</span><span style="color:#960050;background-color:#1e0010">’</span>,
+		<span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">Cart</span><span style="color:#960050;background-color:#1e0010">’</span>
+	}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">response</span>))
+	.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>))
 }
-</code></pre>
-
-<p>Maka akan muncul seperti terlihat pada gambar dibawah.</p>
-
-<p><img src="/img/create-react-native-library-11.jpg" alt="" /></p>
+</code></pre></div><p>Maka akan muncul seperti terlihat pada gambar dibawah.</p>
+<p><img src="/img/create-react-native-library-11.jpg" alt=""></p>
 
   </div>
   
@@ -470,7 +398,7 @@ project(‘:react-native-paypal-wrapper’).projectDir = new File(rootProject.pr
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

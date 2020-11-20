@@ -1,6 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://sulaeman.com/tags/cloud/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/tags/learning/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/posts/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/tags/server/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/tags/</loc>
+    <lastmod>2020-11-20T17:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
   <url>
     <loc>https://sulaeman.com/posts/why-im-using-python-3-6-for-aws-lambda-functions/</loc>
@@ -10,8 +66,22 @@
   </url>
   
   <url>
+    <loc>https://sulaeman.com/tags/electronic/</loc>
+    <lastmod>2017-08-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sulaeman.com/posts/mengganti-baterai-psp-yang-sudah-rusak/</loc>
     <lastmod>2017-08-02T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sulaeman.com/tags/code/</loc>
+    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -80,6 +150,13 @@
   </url>
   
   <url>
+    <loc>https://sulaeman.com/tags/concept/</loc>
+    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/</loc>
     <lastmod>2017-02-03T16:30:12+07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -124,70 +201,7 @@
   <url>
     <loc>https://sulaeman.com/categories/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/cloud/</loc>
-    <lastmod>2017-03-08T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/code/</loc>
-    <lastmod>2017-07-29T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/concept/</loc>
-    <lastmod>2017-02-03T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/electronic/</loc>
-    <lastmod>2017-08-02T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/learning/</loc>
-    <lastmod>2017-10-24T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/posts/</loc>
-    <lastmod>2017-10-24T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/server/</loc>
-    <lastmod>2017-03-08T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/</loc>
-    <lastmod>2017-10-24T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sulaeman.com/tags/</loc>
-    <lastmod>2017-03-08T16:30:12+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

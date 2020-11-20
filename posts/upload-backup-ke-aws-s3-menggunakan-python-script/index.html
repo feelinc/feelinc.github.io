@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder &#43; file backup akan seperti tampilan dibawah.
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
-Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”."/>
+ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/" />
@@ -33,7 +33,7 @@ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai 
 <meta name="twitter:title" content="Upload Backup ke AWS S3 Menggunakan Python Script :: Sulaeman — Mikir..." />
 <meta name="twitter:description" content="Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder &#43; file backup akan seperti tampilan dibawah.
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
-Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”." />
+ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -44,7 +44,7 @@ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai 
 <meta property="og:title" content="Upload Backup ke AWS S3 Menggunakan Python Script :: Sulaeman — Mikir...">
 <meta property="og:description" content="Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder &#43; file backup akan seperti tampilan dibawah.
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.
-Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”." />
+ Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”." />
 <meta property="og:url" content="https://sulaeman.com/posts/upload-backup-ke-aws-s3-menggunakan-python-script/" />
 <meta property="og:site_name" content="Upload Backup ke AWS S3 Menggunakan Python Script" />
 <meta property="og:image" content="">
@@ -207,73 +207,42 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/Python-AWS-S3.png" alt="Python AWS S3" /></p>
-
+    <p><img src="/img/Python-AWS-S3.png" alt="Python AWS S3"></p>
 <p>Pastikan Anda telah membuat Bucket terlebih dahulu di AWS S3, kemudian membuat folder yang akan digunakan untuk menyimpan hasil upload, contoh path “/backup/mysql”. Hasil yang diharapkan setelah Python script nya berhasil meng-upload semua folder + file backup akan seperti tampilan dibawah.</p>
-
-<p><img src="/img/AWS-S3-Backup.png" alt="AWS S3 Backup" />
+<p><img src="/img/AWS-S3-Backup.png" alt="AWS S3 Backup">
 [*] Folder yang kosong tidak akan diupload ke AWS S3, karena S3 mengacu pada file path sebagai key nya.</p>
-
-<hr />
-
+<hr>
 <p>Sekarang buat terlebih dahulu sebuah user di AWS IAM service, yang akan dipakai khusus untuk mengakses folder “/backup/mysql” di bucket “my-bucket”.</p>
-
 <p>User yang telah dibuat akan memiliki Access Key dan Access Secret, Anda harus simpan data tersebut baik – baik, karena akan dibutuhkan oleh python script yang akan dibuat nanti untuk mengakses AWS S3.</p>
-
-<p><img src="/img/AWS-User-Backup.png" alt="AWS User Backup" /></p>
-
-<hr />
-
+<p><img src="/img/AWS-User-Backup.png" alt="AWS User Backup"></p>
+<hr>
 <p>Kemudian buat sebuah custom policy yang khusus akan dipakai oleh user “mysql-backup”.</p>
-
-<p><img src="/img/AWS-Policy-Backup.png" alt="AWS Policy Backup" /></p>
-
+<p><img src="/img/AWS-Policy-Backup.png" alt="AWS Policy Backup"></p>
 <blockquote>
-<p>LANGKAH <code>Create Policy -&gt; Create Your Own Policy</code></p>
+<p>LANGKAH <!-- raw HTML omitted -->Create Policy -&gt; Create Your Own Policy<!-- raw HTML omitted --></p>
 </blockquote>
-
-<p><img src="/img/AWS-Policy-Create.png" alt="AWS Policy Create" /></p>
-
-<hr />
-
+<p><img src="/img/AWS-Policy-Create.png" alt="AWS Policy Create"></p>
+<hr>
 <p>Kemudian attach policy yang telah dibuat ke user “mysql-backup”.</p>
-
-<p><img src="/img/AWS-Policy-Attach.png" alt="AWS Policy Attach" /></p>
-
-<hr />
-
+<p><img src="/img/AWS-Policy-Attach.png" alt="AWS Policy Attach"></p>
+<hr>
 <p>Sekarang masuk ke console server Anda. Anda membutuhkan AWS S3 Python SDK (boto3). Pertama Anda harus memiliki “pip”, jika belum punya maka install menggunakan perintah dibawah (contoh pada CentOS):</p>
-
-<p><code>sudo yum -y install python-pip</code>
-<code>pip install boto3</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo yum -y install python-pip<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->pip install boto3<!-- raw HTML omitted --></p>
+<hr>
 <p>Sekarang buat sebuah file “upload-dir-s3.py” dengan isi isi python script yang telah saya buat di <a href="https://gist.github.com/feelinc/d1f541af4f31d09a2ec3">Gist Github</a></p>
-
 <p>Kemudian update permission file tersebut:</p>
-
-<p><code>sudo chmod 0700 upload-dir-s3.py</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo chmod 0700 upload-dir-s3.py<!-- raw HTML omitted --></p>
+<hr>
 <p>Sekarang buat sebuah file “/home/user-anda/.aws/credentials” untuk menyimpan informasi Access Key and Access Secret yang akan digunakan oleh AWS S3 Python SDK:</p>
-
 <pre><code>[default]
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
-</code></pre>
-
-<p>Sekarang buat sebuah file “/home/user-anda/.aws/config” untuk menyimpan informasi default zona (region) S3 bucket “my-bucket” yang akan digunakan oleh AWS S3 Python SDK:</p>
-
+</code></pre><p>Sekarang buat sebuah file “/home/user-anda/.aws/config” untuk menyimpan informasi default zona (region) S3 bucket “my-bucket” yang akan digunakan oleh AWS S3 Python SDK:</p>
 <pre><code>[default]
 region=us-east-1
-</code></pre>
-
-<p>Mari kita coba jalankan script python nya:</p>
-
-<p><code>./upload-dir-s3.py <direktori-yg-akan-di-upload> my-bucket backup/mysql</code></p>
-
+</code></pre><p>Mari kita coba jalankan script python nya:</p>
+<p><!-- raw HTML omitted -->./upload-dir-s3.py <!-- raw HTML omitted --> my-bucket backup/mysql<!-- raw HTML omitted --></p>
 <p>Silahkan periksa apakah semua ter-upload dengan benar. Jika semua lancar, Anda tinggal membuat crontab untuk menjalankan perintah diatas pada waktu tertentu setiap hari.</p>
 
   </div>
@@ -315,7 +284,7 @@ region=us-east-1
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

@@ -9,7 +9,7 @@
 <meta name="description" content="Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
 Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
  Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !
-Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !"/>
+  Pembeli melakukan pembayaran antar bank."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/" />
@@ -35,7 +35,7 @@ Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengiri
 <meta name="twitter:description" content="Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
 Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
  Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !
-Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !" />
+  Pembeli melakukan pembayaran antar bank." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -47,7 +47,7 @@ Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengiri
 <meta property="og:description" content="Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.
 Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :
  Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !
-Pembeli melakukan pembayaran antar bank. Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !" />
+  Pembeli melakukan pembayaran antar bank." />
 <meta property="og:url" content="https://sulaeman.com/posts/memudahkan-pengecekan-pembayaran-online-di-bank-menggunakan-kode-unik/" />
 <meta property="og:site_name" content="Memudahkan pengecekan pembayaran online di bank menggunakan kode unik" />
 <meta property="og:image" content="">
@@ -210,74 +210,54 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/membuat-kode-unik.jpg" alt="Membuat kode unik" /></p>
-
+    <p><img src="/img/membuat-kode-unik.jpg" alt="Membuat kode unik"></p>
 <p>Kebanyakan penjual online yang menerima pembayaran melalui transfer bank pasti mengalami kesulitan dalam melakukan verifikasi pembayaran yang dilakukan pembeli.</p>
-
 <p>Memang tidak sedikit verifikasi pembayaran di e-banking atau online banking dari transaksi pembelian menjadikan penjual mengalami kesulitan karena berbagai perilaku sistem bank yang tidak standar dalam merekam transaksi nya. Contoh :</p>
-
 <blockquote>
 <p>Pembeli melakukan pembayaran, tetapi nama pembeli berbeda dengan nama pemilik rekening yang digunakan !</p>
-
+</blockquote>
+<blockquote>
 <p>Pembeli melakukan pembayaran antar bank.  Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !</p>
-
+</blockquote>
+<blockquote>
 <p>Pembeli melakukan pembayaran, tetapi tidak mencantumkan berita / keterangan transfer !</p>
-
+</blockquote>
+<blockquote>
 <p>Pembeli melakukan pembayaran melalui BCA. Ketika penjual memeriksa transaksi, tanggal transaksi hanya muncul “PEND” !</p>
-
+</blockquote>
+<blockquote>
 <p>Pembeli melakukan pembayaran melalui BNI SMS Banking ke rekening BNI penjual. Masalah yang timbul adalah nama pengirim akan tidak terlihat didaftar transaksi ketika dilihat oleh penjual !</p>
-
+</blockquote>
+<blockquote>
 <p>BCA / MANDIRI / BNI tidak memperlihatkan jam + menit + detik pada data transaksi !</p>
 </blockquote>
-
 <p>Mungkin masih banyak lagi masalah – masalah yang dihadapi oleh penjual online ketika melakukan verifikasi pembayaran.</p>
-
-<hr />
-
-<p>Solusi nya adalah menggunakan kode unik pada total pembayaran. Solusi ini telah diterapkan oleh banyak marketplace di Indonesia (tokopedia, dll). Dimana pada contoh total pembayaran sebesar <code>Rp. 125.000,-</code> akan ditambahkan kode unik <code>345</code>, menjadi <code>Rp. 125.345,-</code>.</p>
-
+<hr>
+<p>Solusi nya adalah menggunakan kode unik pada total pembayaran. Solusi ini telah diterapkan oleh banyak marketplace di Indonesia (tokopedia, dll). Dimana pada contoh total pembayaran sebesar <!-- raw HTML omitted -->Rp. 125.000,-<!-- raw HTML omitted --> akan ditambahkan kode unik <!-- raw HTML omitted -->345<!-- raw HTML omitted -->, menjadi <!-- raw HTML omitted -->Rp. 125.345,-<!-- raw HTML omitted -->.</p>
 <p>Mengapa kode unik nya hanya 3 digit? Sebenarnya terserah mau berapa digit. Pertimbangannya adalah :</p>
-
 <ol>
-<li><code>1 digit</code>, pilihan dari <code>0</code> sampai <code>9</code>.</li>
-<li><code>2 digit</code>, pilihan dari <code>0</code> sampai <code>99</code>.</li>
-<li><code>3 digit</code>, pilihan dari <code>0</code> sampai <code>999</code>.</li>
+<li><!-- raw HTML omitted -->1 digit<!-- raw HTML omitted -->, pilihan dari <!-- raw HTML omitted -->0<!-- raw HTML omitted --> sampai <!-- raw HTML omitted -->9<!-- raw HTML omitted -->.</li>
+<li><!-- raw HTML omitted -->2 digit<!-- raw HTML omitted -->, pilihan dari <!-- raw HTML omitted -->0<!-- raw HTML omitted --> sampai <!-- raw HTML omitted -->99<!-- raw HTML omitted -->.</li>
+<li><!-- raw HTML omitted -->3 digit<!-- raw HTML omitted -->, pilihan dari <!-- raw HTML omitted -->0<!-- raw HTML omitted --> sampai <!-- raw HTML omitted -->999<!-- raw HTML omitted -->.</li>
 <li>dan seterusnya.</li>
 </ol>
-
-<p>Semua tergantung dari berapa jumlah penjualan / hari yang biasa diterima oleh penjual. Memakai <code>4</code> atau <code>5</code> digit saya kira terlalu berlebihan. <code>4</code> digit mungkin masih dapat diterima berdasarkan penjualan / hari.</p>
-
-<hr />
-
+<p>Semua tergantung dari berapa jumlah penjualan / hari yang biasa diterima oleh penjual. Memakai <!-- raw HTML omitted -->4<!-- raw HTML omitted --> atau <!-- raw HTML omitted -->5<!-- raw HTML omitted --> digit saya kira terlalu berlebihan. <!-- raw HTML omitted -->4<!-- raw HTML omitted --> digit mungkin masih dapat diterima berdasarkan penjualan / hari.</p>
+<hr>
 <p>Sekarang bagaimana cara membuat kode unik tersebut? Kebetulan saya seringnya coding di PHP, jadi akan saya jelaskan sebatas apa yang diketahui. Dimana ada berbagai cara untuk membuat kode unik tersebut :</p>
-
-<h3>1. Memakai Fungsi <code>rand()</code> atau <code>mt_rand()</code> di PHP</h3>
-
+<!-- raw HTML omitted -->
 <p>Hati – hati memakai dua fungsi diatas, karena bisa terjadi hasil nomor yang sama. Tidak percaya? silahkan buktikan sendiri.</p>
-
-<h3>2. Menggunakan <code>Jam [00]</code> dan <code>Detik [00]</code></h3>
-
-<p>Karena target berdasarkan penjualan / hari, dan kode unik yang akan diambil adalah <code>4 digit</code>, maka contoh hasil yang akan didapat adalah <code>jam [11]</code> + <code>detik [23]</code> = <code>[1123]</code>. Jika total pembayaran awal <code>Rp. 125.000,-</code> maka total + kode unik adalah <code>Rp. 126.123,-</code>.</p>
-
+<!-- raw HTML omitted -->
+<p>Karena target berdasarkan penjualan / hari, dan kode unik yang akan diambil adalah <!-- raw HTML omitted -->4 digit<!-- raw HTML omitted -->, maka contoh hasil yang akan didapat adalah <!-- raw HTML omitted -->jam [11]<!-- raw HTML omitted --> + <!-- raw HTML omitted -->detik [23]<!-- raw HTML omitted --> = <!-- raw HTML omitted -->[1123]<!-- raw HTML omitted -->. Jika total pembayaran awal <!-- raw HTML omitted -->Rp. 125.000,-<!-- raw HTML omitted --> maka total + kode unik adalah <!-- raw HTML omitted -->Rp. 126.123,-<!-- raw HTML omitted -->.</p>
 <p>Sebenarnya memakai konsep ini bisa terjadi masalah juga. Yang harus dipahami adalah jika kode unik ini dibuat oleh kode PHP secara otomatis, yang di eksekusi melalui website, maka harus dilihat adalah pada perilaku web server (Apache / Nginx / lainnya). Dimana web server dan PHP dapat menerima multi sesi, sehingga bisa terjadi ada 2 atau lebih sesi yang berjalan pada detik yang sama, maka akan muncul kode unik yang sama. Memang kemungkinan nya sangat kecil, jika dibandingkan dengan total pembayaran yang akan ditambahkan.</p>
-
-<h3>Menggunakan <code>Increment ID</code> dari Shopping Cart / Quote</h3>
-
+<!-- raw HTML omitted -->
 <p>Mengapa tidak menggunakan Increment ID dari data Order? Karena data Order hanya akan dibuat setelah pembeli melakukan Checkout. Sedangkan pembeli perlu diperlihatkan berapa total pembayaran yang sudah ditambah kode unik.</p>
-
 <p>Website atau sistem e-commerce yang bagus, biasanya menyimpan informasi Shopping Cart / Quote kedalam sebuah tabel di database. Sehingga pembeli dapat meneruskan pembelian lain waktu atau di device yang berbeda (PC pribadi / PC teman / Smartphone).</p>
-
 <p>Yang harus diperhatikan adalah berapa digit yang akan digunakan. Karena Increment ID dari Shopping Cart / Quote akan bertambah terus seiring waktu. Jadi jika maksimal yang akan digunakan hanya 3 digit, maka sistem harus dapat mengaturnya untuk hanya mengambil 3 digit terakhir dari Increment ID.</p>
-
-<p>Misal Increment ID saat ini adalah <code>3569</code>, maka ambil hanya <code>569</code>. Jika total pembayaran awal <code>Rp. 125.000,-</code> maka total + kode unik adalah <code>Rp. 126.569,-</code>.</p>
-
-<p>Dengan konsep ini, kemungkinan masalah yang timbul dari konsep nomor <code>#2</code> diatas tidak akan terjadi. Tinggal memutuskan berapa jumlah digit yang akan dipakai dengan mempertimbangkan penjualan / hari atau / minggu.</p>
-
-<hr />
-
-<p><code>3</code> contoh diatas mudah-mudahan cukup untuk menjadi bahan pertimbangan dalam membuat kode unik yang akan ditambahkan pada total pembayaran transaksi.</p>
-
-<p>Kebetulan saya pernah membuat modul yang menggunakan konsep nomor <code>#3</code> yang diimplementasikan pada Magento versi 2.1.2 yang Anda <a href="https://github.com/feelinc/magento2-checkout-unique-grand-total">temukan disini</a>.</p>
+<p>Misal Increment ID saat ini adalah <!-- raw HTML omitted -->3569<!-- raw HTML omitted -->, maka ambil hanya <!-- raw HTML omitted -->569<!-- raw HTML omitted -->. Jika total pembayaran awal <!-- raw HTML omitted -->Rp. 125.000,-<!-- raw HTML omitted --> maka total + kode unik adalah <!-- raw HTML omitted -->Rp. 126.569,-<!-- raw HTML omitted -->.</p>
+<p>Dengan konsep ini, kemungkinan masalah yang timbul dari konsep nomor <!-- raw HTML omitted -->#2<!-- raw HTML omitted --> diatas tidak akan terjadi. Tinggal memutuskan berapa jumlah digit yang akan dipakai dengan mempertimbangkan penjualan / hari atau / minggu.</p>
+<hr>
+<p><!-- raw HTML omitted -->3<!-- raw HTML omitted --> contoh diatas mudah-mudahan cukup untuk menjadi bahan pertimbangan dalam membuat kode unik yang akan ditambahkan pada total pembayaran transaksi.</p>
+<p>Kebetulan saya pernah membuat modul yang menggunakan konsep nomor <!-- raw HTML omitted -->#3<!-- raw HTML omitted --> yang diimplementasikan pada Magento versi 2.1.2 yang Anda <a href="https://github.com/feelinc/magento2-checkout-unique-grand-total">temukan disini</a>.</p>
 
   </div>
   
@@ -318,7 +298,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

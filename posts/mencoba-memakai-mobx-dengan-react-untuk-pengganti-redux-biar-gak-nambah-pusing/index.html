@@ -205,18 +205,13 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/react-mobx.jpg" alt="React MobX" /></p>
-
+    <p><img src="/img/react-mobx.jpg" alt="React MobX"></p>
 <blockquote>
 <p>Mikirin flow aplikasi React kita juga udah pusing, jangan sampai library tambahan yang kita pakai malah nambah pusing.</p>
 </blockquote>
-
 <p>Mungkin akan ada yang bilang bahwa saya gak bener aja menggunakannya Redux sehingga bikin pusing. Mungkin bener juga apa yang situ bilang, jadi komen aja harusnya seperti apa best practice nya. Really appreciated.</p>
-
 <p>Tapi untuk saat ini, menggunakan <a href="http://mobxjs.github.io/mobx/">MobX</a> mengurangi pusing saya dalam membuat aplikasi menggunakan React. Saya gak akan membandingkan Redux dengan MobX. Disini saya hanya akan memperlihatkan bagaimana menggunakan MobX pada sebuah aplikasi sederhana, contoh paling umum adalah membuat aplikasi Todo.</p>
-
-<h2>1. Persiapan</h2>
-
+<!-- raw HTML omitted -->
 <ul>
 <li>Pastikan koneksi internet kamu bagus. Karena perlu meng-unduh banyak library.</li>
 <li>Kamu juga harus udah tau cara install NodeJS dan NPM. Memang ini untuk aplikasi front-end, tapi dependency JavaScript sekarang banyak pake NPM.</li>
@@ -224,238 +219,181 @@ if (!doNotTrack) {
 <li>Kamu pernah membuat aplikasi sederhana menggunakan React</li>
 <li>Dan lain – lain (lupa)</li>
 </ul>
-
 <p>Disini saya gak akan menampilkan semua codingnya, kepanjangan! Nanti source code lengkap bisa kamu lihat di GitHub, tautan ada paling bawah deh.</p>
-
-<h2>2. Pertama bikin dulu pondasi awalnya</h2>
-
+<!-- raw HTML omitted -->
 <p>Supaya cepet, kita akan pakai <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a> untuk membuat pondasi awalnya.</p>
-
 <pre><code>npm install -g create-react-app
 create-react-app todo
 cd todo/
-</code></pre>
-
-<h2>3. Tambahkan library yang diperlukan</h2>
-
+</code></pre><!-- raw HTML omitted -->
 <p>Kita akan tambahkan <a href="http://mobxjs.github.io/mobx/">MobX</a>.</p>
-
 <pre><code>npm install mobx –save
 npm install mobx-react –save
 npm install mobx-react-devtools –save
 npm install node-uuid –save
-</code></pre>
-
-<p>Sekarang coba kita preview dulu, biar gak bosen.</p>
-
+</code></pre><p>Sekarang coba kita preview dulu, biar gak bosen.</p>
 <pre><code>npm start
-</code></pre>
-
-<p>Sebuah tab baru di browser kamu akan terbuka otomatis dengan alamat <a href="http://localhost:3000/">http://localhost:3000/</a> . Kalau gak muncul atau error, mungkin ada masalah dengan konfigurasi hosts kamu, sana main dulu ke StackOverflow, yang jelas belajar bahasa Inggris juga biar tambah pinterrrr.</p>
-
-<h2>4. Membuat Store</h2>
-
+</code></pre><p>Sebuah tab baru di browser kamu akan terbuka otomatis dengan alamat http://localhost:3000/ . Kalau gak muncul atau error, mungkin ada masalah dengan konfigurasi hosts kamu, sana main dulu ke StackOverflow, yang jelas belajar bahasa Inggris juga biar tambah pinterrrr.</p>
+<!-- raw HTML omitted -->
 <p>Store ini bayangkan kyak database sederhana, yang manfaatnya untuk menyimpan data sementara yang berada pada codingan JavaScript kita. Gak ngerti….?. Karena kalau browser di refresh, maka data dalam Store ini akan hilang. Kalau yang baru tau, nah sekarang tau.</p>
+<p>Buat file <!-- raw HTML omitted -->src/Store/Todo.js<!-- raw HTML omitted --> dengan isi dibawah</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">extendObservable</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">mobx</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">uuid</span> <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">node</span><span style="color:#f92672">-</span><span style="color:#a6e22e">uuid</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
-<p>Buat file <code>src/Store/Todo.js</code> dengan isi dibawah</p>
-
-<pre><code class="language-javascript">import { extendObservable } from ‘mobx’;
-import uuid from ‘node-uuid’;
-
-/**
- * The Todo item.
- */
-export class Todo {
-  parent = null;
-  constructor(parent) {
-    extendObservable(this, {
-      data: {},
-      isLoading: false
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The Todo item.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Todo</span> {
+  <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">parent</span>) {
+    <span style="color:#a6e22e">extendObservable</span>(<span style="color:#66d9ef">this</span>, {
+      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {},
+      <span style="color:#a6e22e">isLoading</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
     });
-    this.parent = parent;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parent</span>;
   }
-  update(data) {
-    this.data = data;
+  <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
   }
 }
 
 
-/**
- * The Todo Store.
- */
-export class TodoStore {
-  constructor() {
-    extendObservable(this, {
-      items: [],
-      isLoading: false
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The Todo Store.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TodoStore</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#a6e22e">extendObservable</span>(<span style="color:#66d9ef">this</span>, {
+      <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [],
+      <span style="color:#a6e22e">isLoading</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
     });
   }
 }
-</code></pre>
-
-<p>Semua data Todo akan disimpan pada key “items”, dan setiap data Todo akan disimpan pada key “data”.</p>
-
-<h2>5. Menggunakan Store</h2>
-
+</code></pre></div><p>Semua data Todo akan disimpan pada key “items”, dan setiap data Todo akan disimpan pada key “data”.</p>
+<!-- raw HTML omitted -->
 <p>Penggunaannya bisa kita import pada “src/App.js“, atau terserah semau kamu nanti akan dipakai dimana.</p>
+<p>Pada <!-- raw HTML omitted -->src/App.js<!-- raw HTML omitted --> tambahkan.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TodoStore</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span>.<span style="color:#f92672">/</span><span style="color:#a6e22e">Store</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Todo</span><span style="color:#960050;background-color:#1e0010">’</span>;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TodoStore</span>();
+</code></pre></div><p>Selengkapnya seperti ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">logo</span> <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span>.<span style="color:#f92672">/</span><span style="color:#a6e22e">logo</span>.<span style="color:#a6e22e">svg</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#960050;background-color:#1e0010">‘</span>.<span style="color:#f92672">/</span><span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
-<p>Pada <code>src/App.js</code> tambahkan.</p>
-
-<pre><code class="language-javascript">import { TodoStore } from ‘./Store/Todo’;
-</code></pre>
-
-<pre><code class="language-javascript">this.store = new TodoStore();
-</code></pre>
-
-<p>Selengkapnya seperti ini.</p>
-
-<pre><code class="language-javascript">import React, { Component } from ‘react’;
-import logo from ‘./logo.svg’;
-import ‘./App.css’;
-
-import { observer } from ‘mobx-react’;
-import { TodoStore } from ‘./Store/Todo’;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">observer</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">mobx</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TodoStore</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span>.<span style="color:#f92672">/</span><span style="color:#a6e22e">Store</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Todo</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
 
-const App = observer(class App extends Component {
-  constructor() {
-    super();
-    this.todoStore = new TodoStore();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">App</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">observer</span>(<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">App</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#66d9ef">super</span>();
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">todoStore</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TodoStore</span>();
   }
-  render() {
-    // Your existing render
-    ………..
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#75715e">// Your existing render
+</span><span style="color:#75715e"></span>    <span style="color:#960050;background-color:#1e0010">………</span>..
   }
 });
 
 
-export default App;
-</code></pre>
-
-<h2>6. Menambahkan data Todo</h2>
-
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</code></pre></div><!-- raw HTML omitted -->
 <p>Menggunakan konsep Store dan MobX, maka fungsi untuk mengolah data Todo dan menyimpannya pada key “items” dapat disiapkan pada Store.</p>
-
 <p>Kita tambahkan dulu sebuah sebuah fungsi untuk membuat data Todo baru pada Store yang sebelumnya telah dibuat.</p>
-
-<pre><code class="language-javascript">/**
- * The Todo Store.
- */
-export class TodoStore {
-  ………….
-  create(data) {
-    const item = new Todo(this);
-    this.items.push(item);
-    item.update(data);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The Todo Store.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TodoStore</span> {
+  <span style="color:#960050;background-color:#1e0010">…………</span>.
+  <span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Todo</span>(<span style="color:#66d9ef">this</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
+    <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">data</span>);
   }
-  …………..
+  <span style="color:#960050;background-color:#1e0010">…………</span>..
 }
-</code></pre>
+</code></pre></div><p>Cara memakainya sederhana. Contoh kita telah membuat sebuah input text biasa. Ketika input text tersebut di “enter”, maka akan memanggil sebuah fungsi yang akan menyimpan hasil ketikan di input text.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">PropTypes</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">observer</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">mobx</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
-<p>Cara memakainya sederhana. Contoh kita telah membuat sebuah input text biasa. Ketika input text tersebut di “enter”, maka akan memanggil sebuah fungsi yang akan menyimpan hasil ketikan di input text.</p>
-
-<pre><code class="language-javascript">import React, { Component, PropTypes } from ‘react’;
-import { observer } from ‘mobx-react’;
-
-const Footer = observer(class Footer extends Component {
-  static propTypes = {
-    store: PropTypes.object.isRequired
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Footer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">observer</span>(<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Footer</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">propTypes</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">store</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>
   };
-  ………………………………….
-  handleTextKeyDown(e) {
-    this.props.store.create({
-      text: this.text
+  <span style="color:#960050;background-color:#1e0010">…………………………………</span>.
+  <span style="color:#a6e22e">handleTextKeyDown</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">create</span>({
+      <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">text</span>
     });
   }
 });
 
 
-export default Footer;
-</code></pre>
-
-<p>Seperti terlihat diatas, kita hanya perlu memanggil fungsi “create” pada Store yang telah disediakan tadi.</p>
-
-<pre><code class="language-javascript">this.props.store.create({
-  text: “Ini text todo baru loh!”
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Footer</span>;
+</code></pre></div><p>Seperti terlihat diatas, kita hanya perlu memanggil fungsi “create” pada Store yang telah disediakan tadi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Ini</span> <span style="color:#a6e22e">text</span> <span style="color:#a6e22e">todo</span> <span style="color:#a6e22e">baru</span> <span style="color:#a6e22e">loh</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>
 });
-</code></pre>
-
-<h2>7. Menghapus data Todo</h2>
-
-<p>Untuk menghapus sebuah data Todo pun konsep nya sama dengan menambah diatas. Kita siapkan dulu sebuah fungsi pada class Todo didalam file <code>src/Store/Todo.js</code></p>
-
-<pre><code class="language-javascript">/**
- * The Todo item.
- */
-export class Todo {
-  ……………………………….
-  delete() {
-    this.parent.removeItem(this);
+</code></pre></div><!-- raw HTML omitted -->
+<p>Untuk menghapus sebuah data Todo pun konsep nya sama dengan menambah diatas. Kita siapkan dulu sebuah fungsi pada class Todo didalam file <!-- raw HTML omitted -->src/Store/Todo.js<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The Todo item.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Todo</span> {
+  <span style="color:#960050;background-color:#1e0010">………………………………</span>.
+  <span style="color:#66d9ef">delete</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#66d9ef">this</span>);
   }
-  ……………………………….
+  <span style="color:#960050;background-color:#1e0010">………………………………</span>.
 }
-</code></pre>
-
-<p>Dan sebuah fungsi di class TodoStore</p>
-
-<pre><code class="language-javascript">/**
- * The Todo Store.
- */
-export class TodoStore {
-  …………………………………………..
-  removeItem(item) {
-    this.items.splice(this.items.indexOf(item), 1);
+</code></pre></div><p>Dan sebuah fungsi di class TodoStore</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The Todo Store.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TodoStore</span> {
+  <span style="color:#960050;background-color:#1e0010">…………………………………………</span>..
+  <span style="color:#a6e22e">removeItem</span>(<span style="color:#a6e22e">item</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">item</span>), <span style="color:#ae81ff">1</span>);
   }
-  …………………………………………..
+  <span style="color:#960050;background-color:#1e0010">…………………………………………</span>..
 }
-</code></pre>
+</code></pre></div><p>Cara memakainya sama seperti fungsi <!-- raw HTML omitted -->create<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">PropTypes</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">observer</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">mobx</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
-<p>Cara memakainya sama seperti fungsi <code>create</code></p>
-
-<pre><code class="language-javascript">import React, { Component, PropTypes } from ‘react’;
-import { observer } from ‘mobx-react’;
-
-const Item = observer(class Item extends Component {
-  static propTypes = {
-    todo: PropTypes.object.isRequired
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">observer</span>(<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Item</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">propTypes</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">todo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>
   };
-  ……………………………………………
-  handleRemove() {
-    this.props.todo.delete();
+  <span style="color:#960050;background-color:#1e0010">……………………………………………</span>
+  <span style="color:#a6e22e">handleRemove</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">todo</span>.<span style="color:#66d9ef">delete</span>();
   }
 });
 
 
-export default Item;
-</code></pre>
-
-<h2>8. Menampilkan data Todo</h2>
-
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Item</span>;
+</code></pre></div><!-- raw HTML omitted -->
 <p>Untuk menampilkan data Todo sangat sederhana, tinggal melihat struktur dari Store yang kita punya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">PropTypes</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">observer</span> } <span style="color:#a6e22e">from</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">mobx</span><span style="color:#f92672">-</span><span style="color:#a6e22e">react</span><span style="color:#960050;background-color:#1e0010">’</span>;
 
-<pre><code class="language-javascript">import React, { Component, PropTypes } from ‘react’;
-import { observer } from ‘mobx-react’;
-
-const Item = observer(class Item extends Component {
-  static propTypes = {
-    todo: PropTypes.object.isRequired
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">observer</span>(<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Item</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">propTypes</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">todo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>
   };
-  ………………………………………………
-  render() {
-    return this.props.todo.data.text;
+  <span style="color:#960050;background-color:#1e0010">………………………………………………</span>
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">todo</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">text</span>;
   }
-  ………………………………………………
+  <span style="color:#960050;background-color:#1e0010">………………………………………………</span>
 });
 
 
-export default Item;
-</code></pre>
-
-<p>Yang penting dari penggunaan MobX secara dasar adalah pada fungsi <code>observer</code> dan <code>extendObservable</code>. Dimana <code>observer</code> digunakan supaya class Component akan melakukan render ulang ketika terdapat perubahan data yang didefinisikan pada <code>extendObservable</code>.
-Dengan syarat data yang didefinisikan pada <code>extendObservable</code> harus digunakan pada render. Jika tidak, walaupun terdapat perubahan data, maka component tidak akan di render ulang.</p>
-
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Item</span>;
+</code></pre></div><p>Yang penting dari penggunaan MobX secara dasar adalah pada fungsi <!-- raw HTML omitted -->observer<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->extendObservable<!-- raw HTML omitted -->. Dimana <!-- raw HTML omitted -->observer<!-- raw HTML omitted --> digunakan supaya class Component akan melakukan render ulang ketika terdapat perubahan data yang didefinisikan pada <!-- raw HTML omitted -->extendObservable<!-- raw HTML omitted -->.
+Dengan syarat data yang didefinisikan pada <!-- raw HTML omitted -->extendObservable<!-- raw HTML omitted --> harus digunakan pada render. Jika tidak, walaupun terdapat perubahan data, maka component tidak akan di render ulang.</p>
 <p>Ketika akan mengambil / memperbaharui / menghapus data dari server (menggunakan AJAX), maka disarankan buat fungsi-fungsi baru di Store. Sehingga proses pembaharuan data pada Store lebih terkontrol.</p>
-
 <p>Silahkan <a href="https://github.com/feelinc/react-mobx-simple-todo-app-example">klik</a> untuk melihat source code lengkap.</p>
 
   </div>
@@ -497,7 +435,7 @@ Dengan syarat data yang didefinisikan pada <code>extendObservable</code> harus d
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

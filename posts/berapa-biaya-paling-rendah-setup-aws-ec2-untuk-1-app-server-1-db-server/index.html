@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
+<meta name="description" content="Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
@@ -30,7 +30,7 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
+<meta name="twitter:description" content="Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
@@ -40,7 +40,7 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server :: Sulaeman — Mikir...">
-<meta property="og:description" content="1 App Server    Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
+<meta property="og:description" content="Item Description     App Server 1 EC2 t2.small : 1 Core, 2 GB RAM   App EB 1 EBS General Purpose (SSD) : 8 GB   App-Data EBS 1 EBS General Purpose (SSD) : 30 GB   Elastic IP 1 Elastic IP Address     App Server
  Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP." />
 <meta property="og:url" content="https://sulaeman.com/posts/berapa-biaya-paling-rendah-setup-aws-ec2-untuk-1-app-server-1-db-server/" />
 <meta property="og:site_name" content="Berapa Biaya Paling Rendah Setup AWS EC2 Untuk 1 App Server &#43; 1 DB Server" />
@@ -204,12 +204,9 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/AWS-Calculator.png" alt="AWS Calculator" /></p>
-
-<h2>1 App Server</h2>
-
-<p><img src="/img/AWS-App-Server.png" alt="AWS Application Server" /></p>
-
+    <p><img src="/img/AWS-Calculator.png" alt="AWS Calculator"></p>
+<!-- raw HTML omitted -->
+<p><img src="/img/AWS-App-Server.png" alt="AWS Application Server"></p>
 <table>
 <thead>
 <tr>
@@ -217,58 +214,43 @@ if (!doNotTrack) {
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>App Server</td>
 <td>1 EC2 t2.small : 1 Core, 2 GB RAM</td>
 </tr>
-
 <tr>
 <td>App EB</td>
 <td>1 EBS General Purpose (SSD) : 8 GB</td>
 </tr>
-
 <tr>
 <td>App-Data EBS</td>
 <td>1 EBS General Purpose (SSD) : 30 GB</td>
 </tr>
-
 <tr>
 <td>Elastic IP</td>
 <td>1 Elastic IP Address</td>
 </tr>
 </tbody>
 </table>
-
 <blockquote>
 <p>App Server</p>
 </blockquote>
-
 <p>Memang 1 Core untuk prosesor paling rendah. Tetapi kita membutuhkan RAM paling rendah 2 GB jika akan memasang web server Nginx / Apache dan PHP. Yang paling boros adalah PHP tergantung bagaimana aplikasi / web PHP dibuat dan berjalan.</p>
-
 <blockquote>
 <p>App EBS</p>
 </blockquote>
-
 <p>8 GB storage ini hanya akan digunakan oleh sistem operasi dan service – service beserta kebutuhan pendukung aplikasi seperti web server.</p>
-
 <blockquote>
 <p>App-Data EBS</p>
 </blockquote>
-
 <p>30 GB storage ini hanya akan digunakan untuk menyimpan aplikasi data atau source code web. Sehingga jika sistem operasi mengalami masalah atau EC2 harus di upgrade ke kapasitas prosesor &amp; ram yang lebih besar, maka EBS volume ini tinggal di <a href="/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2">attach + konfigurasi dalam hitungan beberapa menit</a>, tetapi tidak usah di partisi ulang.</p>
-
 <blockquote>
 <p>Elastic IP</p>
 </blockquote>
-
 <p>Elastic IP adalah seperti public IP, dimana dapat digunakan sebagai acuan target domain. Kelebihannya adalah jika harus upgrade EC2 maka Elastic IP tinggal di attach ulang, sehingga tidak perlu mengganti konfigurasi domain.</p>
-
-<h2>1 Database Server</h2>
-
-<p><img src="/img/AWS-DB-Server.png" alt="AWS Database Server" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="/img/AWS-DB-Server.png" alt="AWS Database Server"></p>
 <table>
 <thead>
 <tr>
@@ -276,65 +258,48 @@ if (!doNotTrack) {
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>DB Server</td>
 <td>1 EC2 t2.micro : 1 Core, 1 GB RAM</td>
 </tr>
-
 <tr>
 <td>DB EB</td>
 <td>1 EBS General Purpose (SSD) : 8 GB</td>
 </tr>
-
 <tr>
 <td>DB-Data EBS</td>
 <td>1 EBS General Purpose (SSD) : 30 GB</td>
 </tr>
-
 <tr>
 <td>Elastic IP</td>
 <td>TIDAK PERLU</td>
 </tr>
 </tbody>
 </table>
-
 <blockquote>
 <p>DB Server</p>
 </blockquote>
-
 <p>Mengapa App &amp; DB di pisah server? Bayangkan saja hal paling buruk yang bisa terjadi dan seberapa mudah Anda mengelola semua database yang dimiliki.</p>
-
 <p>RAM paling rendah 1 GB cukup untuk MySQL / MariaDB, tinggal di konfigurasi database tersebut supaya tidak menggunakan memory terlalu besar, terutama jumlah request dan cache.</p>
-
 <blockquote>
 <p>DB EBS</p>
 </blockquote>
-
 <p>8 GB storage ini hanya akan digunakan oleh sistem operasi dan service – service beserta kebutuhan pendukung aplikasi seperti DB server.</p>
-
 <blockquote>
 <p>DB-Data EBS</p>
 </blockquote>
-
 <p>30 GB storage ini hanya akan digunakan untuk menyimpan data dari database. Sehingga jika sistem operasi mengalami masalah atau EC2 harus di upgrade ke kapasitas prosesor &amp; ram yang lebih besar, maka EBS volume ini tinggal di <a href="/posts/mount-partisi-amazon-web-service-ebs-volume-di-ec2">attach + konfigurasi dalam hitungan beberapa menit</a>, tetapi tidak usah di partisi ulang.</p>
-
 <blockquote>
 <p>Elastic IP</p>
 </blockquote>
-
 <p>Elastic IP disini tidak dibutuhkan, karena tiap EC2 instance mempunyai Private &amp; Public IP. Disarankan hanya buka 1 port untuk kebutuhan db server saja, dan di atur <a href="/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat">port tersebut hanya boleh di akses oleh Private IP App Server</a>.</p>
-
-<h2>ESTIMASI BIAYA TOTAL / BULAN</h2>
-
-<p><img src="/img/AWS-Cost.png" alt="AWS Cost" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="/img/AWS-Cost.png" alt="AWS Cost"></p>
 <blockquote>
 <p>Menurut saya, di bilang murah memang tidak, di bilang mahal juga sebenarnya tidak, kalau dibandingkan dengan support dan fitur yang dapat kita gunakan di AWS ini, sehingga aplikasi dan data kita tetap dapat di akses dengan mudah dan di scale dengan mudah.</p>
 </blockquote>
-
-<p>[*] Silahkan <mark><a href="https://calculator.s3.amazonaws.com/index.html#r=IAD&amp;s=EC2&amp;key=calc-D5049CFA-D53E-40EE-8021-BFB94A8095EB">klik</a></mark>, untuk melihat detil estimasi dari tiap screenshot diatas.</p>
+<p>[*] Silahkan <!-- raw HTML omitted --><a href="https://calculator.s3.amazonaws.com/index.html#r=IAD&amp;s=EC2&amp;key=calc-D5049CFA-D53E-40EE-8021-BFB94A8095EB">klik</a><!-- raw HTML omitted -->, untuk melihat detil estimasi dari tiap screenshot diatas.</p>
 
   </div>
   
@@ -375,7 +340,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

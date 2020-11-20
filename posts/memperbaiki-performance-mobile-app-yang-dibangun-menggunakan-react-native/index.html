@@ -207,14 +207,11 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/react-perf-chrome-timeline.png" alt="Memperbaiki performance mobile app yang dibangun menggunakan React Native" /></p>
-
+    <p><img src="/img/react-perf-chrome-timeline.png" alt="Memperbaiki performance mobile app yang dibangun menggunakan React Native"></p>
 <blockquote>
 <p>Pasti ada yang mengalami dimana aplikasi yang dibangun menggunakan React Native terasa lambat, hang pada beberapa bagian, atau sampai crash. Berarti aplikasi tersebut harus di optimisasi</p>
 </blockquote>
-
 <p>Penyebabnya bisa dari berbagai macam hal :</p>
-
 <ul>
 <li>Tidak menggunakan komponen yang tepat.</li>
 <li>Data yang diolah pada sebuah bagian komponen berlebihan.</li>
@@ -224,20 +221,14 @@ if (!doNotTrack) {
 <li>Pemanggilan REST API yang berlebihan.</li>
 <li>dan banyak hal lainnya.</li>
 </ul>
-
 <p>Tim React Native sendiri telah menjelaskan banyak hal untuk menyelesaikan masalah performa, terdapat pada tautan berikut :</p>
-
 <ul>
 <li><a href="https://facebook.github.io/react/docs/optimizing-performance.html">https://facebook.github.io/react/docs/optimizing-performance.html</a></li>
 <li><a href="https://facebook.github.io/react-native/docs/performance.html">https://facebook.github.io/react-native/docs/performance.html</a></li>
 </ul>
-
 <p>Pertama, yang dapat dilakukan untuk mengatasi masalah performa, adalah dengan mengetahui terlebih dahulu apa saja proses yang telah diimplementasi terjadi selama aplikasi dipakai dan data apa saja yang diproses.</p>
-
-<p>Untuk melakukan hal itu, dapat menggunakan <strong><a href="https://github.com/infinitered/reactotron">Reactotron</a></strong>. Saya kutip apa itu Reactotron dari Github repo nya seperti berikut.</p>
-
+<p>Untuk melakukan hal itu, dapat menggunakan <!-- raw HTML omitted --><a href="https://github.com/infinitered/reactotron">Reactotron</a><!-- raw HTML omitted -->. Saya kutip apa itu Reactotron dari Github repo nya seperti berikut.</p>
 <p>Reactoron adalah aplikasi MacOS, Windows, dan Linux untuk memeriksa aplikasi React JS dan React Native Anda. Gunakan untuk :</p>
-
 <ul>
 <li>Melihat status aplikasi Anda.</li>
 <li>Menampilkan permintaan &amp; tanggapan dari API.</li>
@@ -248,52 +239,30 @@ if (!doNotTrack) {
 <li>Melacak Async Storag di React Native.</li>
 <li>dan lainnya</li>
 </ul>
-
-<p><img src="/img/create-react-native-library-12.jpg" alt="" />
+<p><img src="/img/create-react-native-library-12.jpg" alt="">
 <a href="https://github.com/infinitered/reactotron/blob/master/docs/images/readme/reactotron-demo-app.gif">Gambar diatas adalah Copyright dari Reactotron</a></p>
-
 <p>Jika aplikasi React Native yang dibuat menggunakan Redux dan Redux Saga, maka Reactotron akan sangat membantu dalam melihat apa saja yang terjadi ketika aplikasi digunakan pada mode development atau debug.</p>
-
 <p>Hal dasar yang dapat dilakukan untuk memperbaiki performa dengan bantuan Reactotron adalah melihat / melacak untuk mencegah komponen melakukan render / update berlebihan padahal tidak diperlukan pada kondisi dimana :</p>
-
 <ol>
 <li>Komponen itu hanya perlu menampilkan data sekali saja, tidak akan ada data baru yang diolah dan ditampilkan disana;</li>
 <li>Komponen itu dalam keadaan sedang tidak tampil didepan layar.</li>
 </ol>
-
 <p>Hal – hal disini berkaitan dengan pemanfaatan Redux sebagai store data. Bukan berarti tidak disarankan. Justru Redux sangat bermanfaat.</p>
-
-<h2>:— 1</h2>
-Untuk bagian pertama hal dasar yang dapat dilakukan untuk memperbaiki performa sebenarnya telah di jelaskan solusi nya pada tautan React Native diatas. Dimana memutuskan apakah perlu sebuah komponen melakukan update / render ulang? Pastinya pembuat aplikasi itu yang memutuskan berdasarkan berbagai pertimbangan.
-
-Jika diputuskan sebenarnya tidak perlu melakukan update / render ulang, atau hanya perlu melakukan update / render sekian kali saja berdasarkan data yang diterima. Kemudian berdasarkan hasil analisa menggunakan Reactotron, dimana ternyata bagian pada komponen itu melakukan update / render ulang berlebihan.
-
-Maka perlu dilakukan filter didalam <code>shouldComponentUpdate</code>, tinggal memberikan <code>return false;</code> jika tidak diperlukan update, dan sebaliknya. Filter bisa berdasarkan perbandingan antara parameter <code>nextProps</code> dan <code>nextState</code> yang diterima oleh fungsi <code>shouldComponentUpdate</code> terhadap <code>this.props</code> dan <code>this.state</code>.
-
-Untuk implementasi hal ini, sangat disarankan untuk memecah terlebih dahulu komponen yang bersangkutan menjadi kumpulan komponen – komponen yang lebih kecil berdasarkan konteksnya. Sehingga lebih memudahkan dalam melakukan filter terhadap komponen kecil tertentu saja.
-
-Action update / render ulang akan terjadi contoh nya jika menggunakan Redux, dimana terdapat lebih dari satu komponen kecil menerima <code>props</code> dari <code>store</code> data yang sama. Ketika salah satu komponen kecil itu melakukan update pada store, maka komponen kecil lain akan menerima store data baru tersebut. Tetapi kembali apakah komponen kecil lainnya memerlukan store data baru tadi atau tidak.
-
-Maka disitu filter didalam <code>shouldComponentUpdate</code> sangat diperlukan.
-
-<h2>:— 2</h2>
-
+<!-- raw HTML omitted -->
+<p>Jika diputuskan sebenarnya tidak perlu melakukan update / render ulang, atau hanya perlu melakukan update / render sekian kali saja berdasarkan data yang diterima. Kemudian berdasarkan hasil analisa menggunakan Reactotron, dimana ternyata bagian pada komponen itu melakukan update / render ulang berlebihan.</p>
+<p>Maka perlu dilakukan filter didalam <!-- raw HTML omitted -->shouldComponentUpdate<!-- raw HTML omitted -->, tinggal memberikan <!-- raw HTML omitted -->return false;<!-- raw HTML omitted --> jika tidak diperlukan update, dan sebaliknya. Filter bisa berdasarkan perbandingan antara parameter <!-- raw HTML omitted -->nextProps<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->nextState<!-- raw HTML omitted --> yang diterima oleh fungsi <!-- raw HTML omitted -->shouldComponentUpdate<!-- raw HTML omitted --> terhadap <!-- raw HTML omitted -->this.props<!-- raw HTML omitted --> dan <!-- raw HTML omitted -->this.state<!-- raw HTML omitted -->.</p>
+<p>Untuk implementasi hal ini, sangat disarankan untuk memecah terlebih dahulu komponen yang bersangkutan menjadi kumpulan komponen – komponen yang lebih kecil berdasarkan konteksnya. Sehingga lebih memudahkan dalam melakukan filter terhadap komponen kecil tertentu saja.</p>
+<p>Action update / render ulang akan terjadi contoh nya jika menggunakan Redux, dimana terdapat lebih dari satu komponen kecil menerima <!-- raw HTML omitted -->props<!-- raw HTML omitted --> dari <!-- raw HTML omitted -->store<!-- raw HTML omitted --> data yang sama. Ketika salah satu komponen kecil itu melakukan update pada store, maka komponen kecil lain akan menerima store data baru tersebut. Tetapi kembali apakah komponen kecil lainnya memerlukan store data baru tadi atau tidak.</p>
+<p>Maka disitu filter didalam <!-- raw HTML omitted -->shouldComponentUpdate<!-- raw HTML omitted --> sangat diperlukan.</p>
+<!-- raw HTML omitted -->
 <p>Untuk bagian kedua berhubungan dengan komponen yang lebih besar, atau bisa disebut sebuah container komponen. Masalah performa dapat muncul ketika menggunakan Stack Navigator. Karena sudah jelas setiap melakukan navigasi screen yang terdaftar didalam Stack Navigator, screen sebelumnya akan berada dibawah screen selanjutnya, dalam keadaan aktif, hanya tidak terlihat didepan layar.</p>
-
-<p>Masalah nya adalah jika terdapat lebih dari satu screen yang menerima <code>props</code> dari <code>store</code> data yang sama. Jika dianalisa menggunakan Reactotron, maka akan terlihat bahwa proses update / render ulang akan terjadi juga didalam screen lain yang sebelumnya telah dibuka yang menerima props store data yang sama.</p>
-
+<p>Masalah nya adalah jika terdapat lebih dari satu screen yang menerima <!-- raw HTML omitted -->props<!-- raw HTML omitted --> dari <!-- raw HTML omitted -->store<!-- raw HTML omitted --> data yang sama. Jika dianalisa menggunakan Reactotron, maka akan terlihat bahwa proses update / render ulang akan terjadi juga didalam screen lain yang sebelumnya telah dibuka yang menerima props store data yang sama.</p>
 <p>Kembali pembuat aplikasi harus memutukan apakah screen lain perlu melakukan update / render ulang atau tidak.</p>
-
-<p>Jika tidak diperlukan, maka disitu juga filter didalam <code>shouldComponentUpdate</code> sangat diperlukan.</p>
-
+<p>Jika tidak diperlukan, maka disitu juga filter didalam <!-- raw HTML omitted -->shouldComponentUpdate<!-- raw HTML omitted --> sangat diperlukan.</p>
 <p>Tetapi bagaimana mengetahui screen mana yang sedang aktif didepan layar?</p>
-
 <p>Jika navigasi aplikasi menggunakan <a href="https://github.com/react-community/react-navigation">React Navigator</a>, maka dapat disimpan state screen yang sedang aktif didepan layar didalam store Redux. Sehingga setiap screen dapat mengetahui apakah dia sedang aktif didepan layar atau tidak.</p>
-
-<p>Terkadang sebuah screen akan di mount ulang ketika melakukan navigasi. Jika melakukan pemanggilan action yang akan mengambil data dari REST API didalam <code>componentDidMount</code>, maka pengecekan apakah screen sedang aktif didepan layar bisa dilakukan untuk mencegah pemanggilan action yang tidak diperlukan. Karena data dari REST API nya kemungkinan sudah tersedia didalam store Redux oleh action sebelumnya.</p>
-
+<p>Terkadang sebuah screen akan di mount ulang ketika melakukan navigasi. Jika melakukan pemanggilan action yang akan mengambil data dari REST API didalam <!-- raw HTML omitted -->componentDidMount<!-- raw HTML omitted -->, maka pengecekan apakah screen sedang aktif didepan layar bisa dilakukan untuk mencegah pemanggilan action yang tidak diperlukan. Karena data dari REST API nya kemungkinan sudah tersedia didalam store Redux oleh action sebelumnya.</p>
 <p>Sekian, semoga artikel ini bermanfaat bagi pengguna React Native baru.</p>
-
 <p>— enjoy</p>
 
   </div>
@@ -335,7 +304,7 @@ Maka disitu filter didalam <code>shouldComponentUpdate</code> sangat diperlukan.
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

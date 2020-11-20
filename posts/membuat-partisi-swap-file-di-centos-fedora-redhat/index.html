@@ -8,11 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
  Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
-Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
+  Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB
-Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.
-Selanjutnya, gunakan perintah – perintah berikut ini:"/>
+sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiBTunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/" />
@@ -37,11 +35,9 @@ Selanjutnya, gunakan perintah – perintah berikut ini:"/>
 <meta name="twitter:title" content="Membuat partisi SWAP file di CentOS / Fedora / RedHat :: Sulaeman — Mikir..." />
 <meta name="twitter:description" content="Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
  Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
-Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
+  Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB
-Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.
-Selanjutnya, gunakan perintah – perintah berikut ini:" />
+sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiBTunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -52,11 +48,9 @@ Selanjutnya, gunakan perintah – perintah berikut ini:" />
 <meta property="og:title" content="Membuat partisi SWAP file di CentOS / Fedora / RedHat :: Sulaeman — Mikir...">
 <meta property="og:description" content="Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia
  Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.
-Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
+  Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB
-Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.
-Selanjutnya, gunakan perintah – perintah berikut ini:" />
+sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiBTunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat." />
 <meta property="og:url" content="https://sulaeman.com/posts/membuat-partisi-swap-file-di-centos-fedora-redhat/" />
 <meta property="og:site_name" content="Membuat partisi SWAP file di CentOS / Fedora / RedHat" />
 <meta property="og:image" content="">
@@ -219,41 +213,27 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/swap-linux-partition.jpg" alt="swap partition" /></p>
-
+    <p><img src="/img/swap-linux-partition.jpg" alt="swap partition"></p>
 <p>Saya harap Disk volume yang akan dijadikan tempat penyimpanan swapfile sudah tersedia</p>
-
 <blockquote>
 <p>Putuskan ukuran swap yang akan dibuat, misal 4 GB = 1024 * 4.</p>
-
+</blockquote>
+<blockquote>
 <p>Putuskan direktori yang akan dijadikan tempat membuat swapfile, misal /mnt/data/swapfile.</p>
 </blockquote>
-
 <p>Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:</p>
-
-<p><code>sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB</code></p>
-
+<p><!-- raw HTML omitted -->sudo dd if=/dev/zero of=/mnt/data/swapfile bs=4096 count=1MiB<!-- raw HTML omitted --></p>
 <p>Tunggu hingga selesai, lumayan lama tergantung ukuran swapfile yang sedang dibuat.</p>
-
-<hr />
-
+<hr>
 <p>Selanjutnya, gunakan perintah – perintah berikut ini:</p>
-
-<p><code>sudo chmod 600 /mnt/data/swapfile</code></p>
-
-<p><code>sudo mkswap /mnt/data/swapfile</code></p>
-
-<p><code>sudo swapon /mnt/data/swapfile</code></p>
-
+<p><!-- raw HTML omitted -->sudo chmod 600 /mnt/data/swapfile<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->sudo mkswap /mnt/data/swapfile<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->sudo swapon /mnt/data/swapfile<!-- raw HTML omitted --></p>
 <p>Silahkan periksa apakah partisi Swap sudah aktif menggunakan perintah : free -m</p>
-
-<hr />
-
+<hr>
 <p>Supaya ketika server restart partisi Swap akan otomatis aktif, maka harus mendaftarkannya di fstab. Edit /etc/fstab, kemudian tambahkan :</p>
-
 <pre><code>/mnt/data/swapfile                        swap                    swap    sw              0 0
 </code></pre>
-
   </div>
   
   <div class="pagination">
@@ -293,7 +273,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

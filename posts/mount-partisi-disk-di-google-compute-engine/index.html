@@ -7,11 +7,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
-Silahkan attach Disk nya ke VM Instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
+  Silahkan attach Disk nya ke VM Instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo fdisk -l
-Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:"/>
+sudo fdisk -lMaka akan terlihat tampilan seperti berikut:  Selanjutnya, lakukan partisi:"/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/" />
@@ -35,11 +34,10 @@ Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Mount &amp; Partisi Disk di Google Compute Engine :: Sulaeman — Mikir..." />
 <meta name="twitter:description" content="Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
-Silahkan attach Disk nya ke VM Instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
+  Silahkan attach Disk nya ke VM Instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo fdisk -l
-Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:" />
+sudo fdisk -lMaka akan terlihat tampilan seperti berikut:  Selanjutnya, lakukan partisi:" />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -49,11 +47,10 @@ Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Mount &amp; Partisi Disk di Google Compute Engine :: Sulaeman — Mikir...">
 <meta property="og:description" content="Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.
-Silahkan attach Disk nya ke VM Instance yang akan di pakai.
-Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
+  Silahkan attach Disk nya ke VM Instance yang akan di pakai.
+  Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.
  Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:
-sudo fdisk -l
-Maka akan terlihat tampilan seperti berikut: Selanjutnya, lakukan partisi:" />
+sudo fdisk -lMaka akan terlihat tampilan seperti berikut:  Selanjutnya, lakukan partisi:" />
 <meta property="og:url" content="https://sulaeman.com/posts/mount-partisi-disk-di-google-compute-engine/" />
 <meta property="og:site_name" content="Mount &amp; Partisi Disk di Google Compute Engine" />
 <meta property="og:image" content="">
@@ -216,69 +213,43 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/Disk-GCE-List.png" alt="Disk GCE List" /></p>
-
+    <p><img src="/img/Disk-GCE-List.png" alt="Disk GCE List"></p>
 <blockquote>
 <p>Pastikan Disk yang dibuat berada di Zona yang sama dengan VM Instance yang akan di pakai.</p>
-
+</blockquote>
+<blockquote>
 <p>Silahkan attach Disk nya ke VM Instance yang akan di pakai.</p>
-
+</blockquote>
+<blockquote>
 <p>Catat Linux Device yang Anda gunakan ketika EBS volume nya di Attach, contoh biasanya : /dev/sdb atau /dev/sdf dan sebagainya.</p>
 </blockquote>
-
 <p>Selanjutnya, setelah Anda telah masuk ke console VM Instance, gunakan perintah – perintah berikut ini:</p>
-
-<p><code>sudo fdisk -l</code></p>
-
+<p><!-- raw HTML omitted -->sudo fdisk -l<!-- raw HTML omitted --></p>
 <p>Maka akan terlihat tampilan seperti berikut:
-<img src="/img/gce-sudo-fdisk-l.png" alt="GCE fdisk l" /></p>
-
-<hr />
-
+<img src="/img/gce-sudo-fdisk-l.png" alt="GCE fdisk l"></p>
+<hr>
 <p>Selanjutnya, lakukan partisi:</p>
-
-<p><code>sudo fdisk /dev/sdb</code></p>
-
+<p><!-- raw HTML omitted -->sudo fdisk /dev/sdb<!-- raw HTML omitted --></p>
 <p>Kemudian ikut seperti tampilan berikut:</p>
-
-<p><img src="/img/sudo-fdisk.jpg" alt="GCE fdisk" />
+<p><img src="/img/sudo-fdisk.jpg" alt="GCE fdisk">
 [*] Yang di tandai merah adalah huruf yang harus Anda ketik, dan tanda panah kosongkan dan enter.</p>
-
-<hr />
-
+<hr>
 <p>Gunakan perintah partprobe supaya kernel mengetahui mengenai perubahan pada sistem.</p>
-
-<p><code>sudo partprobe /dev/sdb</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo partprobe /dev/sdb<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, buat volume pada partisi tadi menggunakan XFS format. Tambahkan angka “1” pada device name nya:</p>
-
-<p><code>sudo mkfs.xfs /dev/sdb1 -f -n ftype=1</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo mkfs.xfs /dev/sdb1 -f -n ftype=1<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, buat directory dimana Anda mount volume yang telah di buat, contoh:</p>
-
-<p><code>sudo mkdir /mnt/data</code></p>
-
-<hr />
-
+<p><!-- raw HTML omitted -->sudo mkdir /mnt/data<!-- raw HTML omitted --></p>
+<hr>
 <p>Selanjutnya, kita mount volume tadi:</p>
-
-<p><code>sudo mount /dev/sdb1 /mnt/data -t xfs</code></p>
-
-<hr />
-
-<p>Supaya ketika server di nyalakan ulang (reboot) volume akan mount secara langsung, maka tambahkan pada <code>/etc/fstab</code> :</p>
-
+<p><!-- raw HTML omitted -->sudo mount /dev/sdb1 /mnt/data -t xfs<!-- raw HTML omitted --></p>
+<hr>
+<p>Supaya ketika server di nyalakan ulang (reboot) volume akan mount secara langsung, maka tambahkan pada <!-- raw HTML omitted -->/etc/fstab<!-- raw HTML omitted --> :</p>
 <pre><code>/dev/sdb1 /mnt/data xfs noatime 1 1
-</code></pre>
-
-<p><code>sudo mount -a</code></p>
-
-<hr />
-
+</code></pre><p><!-- raw HTML omitted -->sudo mount -a<!-- raw HTML omitted --></p>
+<hr>
 <p>Silahkan coba restart server Anda.</p>
 
   </div>
@@ -320,7 +291,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

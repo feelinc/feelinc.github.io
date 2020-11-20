@@ -6,11 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all
-Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent
-Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent
-Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent
-Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent"/>
+<meta name="description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all  Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent  Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent  Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent  Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36."/>
 <meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/" />
@@ -33,11 +29,7 @@ Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-ri
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat :: Sulaeman — Mikir..." />
-<meta name="twitter:description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all
-Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent
-Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent
-Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent
-Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent" />
+<meta name="twitter:description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all  Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent  Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent  Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent  Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36." />
 <meta name="twitter:site" content="https://sulaeman.com/" />
 <meta name="twitter:creator" content="Sulaeman" />
 <meta name="twitter:image" content="">
@@ -46,11 +38,7 @@ Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-ri
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat :: Sulaeman — Mikir...">
-<meta property="og:description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all
-Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent
-Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent
-Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent
-Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent" />
+<meta property="og:description" content="Melihat semua rule di zona publicsudo firewall-cmd –zone=public –list-all  Membuka port tertentu secara permanensudo firewall-cmd –zone=public –add-port=27017/tcp –permanent  Menghapus rule port tertentu secara permanensudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent  Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rulesudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent  Menghapus Rich Rule secara permanensudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36." />
 <meta property="og:url" content="https://sulaeman.com/posts/perintah-perintah-sederhana-konfigurasi-firewalld-di-centos-fedora-redhat/" />
 <meta property="og:site_name" content="Perintah – Perintah Sederhana Konfigurasi FirewallD di CentOS / Fedora / RedHat" />
 <meta property="og:image" content="">
@@ -211,20 +199,24 @@ if (!doNotTrack) {
   
 
   <div class="post-content">
-    <p><img src="/img/firewall.png" alt="Firewall" /></p>
-
+    <p><img src="/img/firewall.png" alt="Firewall"></p>
 <blockquote>
-<p>Melihat semua rule di zona public<br/><code>sudo firewall-cmd –zone=public –list-all</code></p>
-
-<p>Membuka port tertentu secara permanen<br/><code>sudo firewall-cmd –zone=public –add-port=27017/tcp –permanent</code></p>
-
-<p>Menghapus rule port tertentu secara permanen<br/><code>sudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent</code></p>
-
-<p>Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rule<br/><code>sudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent</code></p>
-
-<p>Menghapus Rich Rule secara permanen<br/><code>sudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent</code></p>
-
-<p>Jika sebelumnya Anda menambahkan / menghapus rules yang tidak permanen, maka Anda dapat mengembalikannya seperti semula dengan perintah<br/><code>sudo firewall-cmd –reload</code></p>
+<p>Melihat semua rule di zona public<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –zone=public –list-all<!-- raw HTML omitted --></p>
+</blockquote>
+<blockquote>
+<p>Membuka port tertentu secara permanen<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –zone=public –add-port=27017/tcp –permanent<!-- raw HTML omitted --></p>
+</blockquote>
+<blockquote>
+<p>Menghapus rule port tertentu secara permanen<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –zone=public –remove-port=3000/tcp –permanent<!-- raw HTML omitted --></p>
+</blockquote>
+<blockquote>
+<p>Membuka port tertentu, tetapi hanya boleh di akses dari IP Address tertentu secara permanen, disebut juga Rich Rule<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –zone=public –add-rich-rule=’rule family=”ipv4″ source address=”172.31.22.56″ port protocol=”tcp” port=”3306″ accept’ –permanent<!-- raw HTML omitted --></p>
+</blockquote>
+<blockquote>
+<p>Menghapus Rich Rule secara permanen<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –zone=public –remove-rich-rule=’rule family=”ipv4″ source address=”36.72.128.140″ port protocol=”tcp” port=”3306″ accept’ –permanent<!-- raw HTML omitted --></p>
+</blockquote>
+<blockquote>
+<p>Jika sebelumnya Anda menambahkan / menghapus rules yang tidak permanen, maka Anda dapat mengembalikannya seperti semula dengan perintah<!-- raw HTML omitted --><!-- raw HTML omitted -->sudo firewall-cmd –reload<!-- raw HTML omitted --></p>
 </blockquote>
 
   </div>
@@ -266,7 +258,7 @@ if (!doNotTrack) {
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright copyright--user">&copy; 2019 Sulaeman :: Powered by gohugo.io</div>
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
     
   </div>
 </footer>

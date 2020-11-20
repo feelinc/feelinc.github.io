@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sulaeman</title>
@@ -6,41 +6,41 @@
     <description>Recent content in Tags on Sulaeman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2019 Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Wed, 08 Mar 2017 16:30:12 +0700</lastBuildDate>
+    <copyright>&amp;copy; Sulaeman :: Powered by gohugo.io</copyright>
+    <lastBuildDate>Fri, 20 Nov 2020 17:30:12 +0700</lastBuildDate>
     
 	<atom:link href="https://sulaeman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Cloud</title>
+      <title>cloud</title>
       <link>https://sulaeman.com/tags/cloud/</link>
-      <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
+      <pubDate>Fri, 20 Nov 2020 17:30:12 +0700</pubDate>
       
       <guid>https://sulaeman.com/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Code</title>
-      <link>https://sulaeman.com/tags/code/</link>
-      <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
+      <title>learning</title>
+      <link>https://sulaeman.com/tags/learning/</link>
+      <pubDate>Fri, 20 Nov 2020 17:30:12 +0700</pubDate>
       
-      <guid>https://sulaeman.com/tags/code/</guid>
+      <guid>https://sulaeman.com/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Concept</title>
-      <link>https://sulaeman.com/tags/concept/</link>
-      <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
+      <title>server</title>
+      <link>https://sulaeman.com/tags/server/</link>
+      <pubDate>Fri, 20 Nov 2020 17:30:12 +0700</pubDate>
       
-      <guid>https://sulaeman.com/tags/concept/</guid>
+      <guid>https://sulaeman.com/tags/server/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Electronic</title>
+      <title>electronic</title>
       <link>https://sulaeman.com/tags/electronic/</link>
       <pubDate>Wed, 02 Aug 2017 16:30:12 +0700</pubDate>
       
@@ -49,20 +49,20 @@
     </item>
     
     <item>
-      <title>Learning</title>
-      <link>https://sulaeman.com/tags/learning/</link>
-      <pubDate>Tue, 24 Oct 2017 16:30:12 +0700</pubDate>
+      <title>code</title>
+      <link>https://sulaeman.com/tags/code/</link>
+      <pubDate>Sat, 29 Jul 2017 16:30:12 +0700</pubDate>
       
-      <guid>https://sulaeman.com/tags/learning/</guid>
+      <guid>https://sulaeman.com/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Server</title>
-      <link>https://sulaeman.com/tags/server/</link>
-      <pubDate>Wed, 08 Mar 2017 16:30:12 +0700</pubDate>
+      <title>concept</title>
+      <link>https://sulaeman.com/tags/concept/</link>
+      <pubDate>Fri, 03 Feb 2017 16:30:12 +0700</pubDate>
       
-      <guid>https://sulaeman.com/tags/server/</guid>
+      <guid>https://sulaeman.com/tags/concept/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Mencoba menggunakan layanan AWS Elasticsearch :: Sulaeman — Mikir...</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah self-managed Elasticsearch cluster. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari self-managed Elasticsearch cluster ke AWS Elasticsearch Service
+1: Membuat Elasticsearch domain  Pertama kali kamu harus membuat sebuah Elasticsearch domain. Domain ini adalah sebuah cluster yang nanti memiliki data nodes dan master nodes."/>
+<meta name="keywords" content="Penggalan pengalaman, baru sempat ada waktu untuk membuat artikel kembali"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/" />
+
+
+<link rel="stylesheet" href="https://sulaeman.com/assets/style.css">
+
+  <link rel="stylesheet" href="https://sulaeman.com/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://sulaeman.com/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://sulaeman.com/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mencoba menggunakan layanan AWS Elasticsearch :: Sulaeman — Mikir..." />
+<meta name="twitter:description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah self-managed Elasticsearch cluster. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari self-managed Elasticsearch cluster ke AWS Elasticsearch Service
+1: Membuat Elasticsearch domain  Pertama kali kamu harus membuat sebuah Elasticsearch domain. Domain ini adalah sebuah cluster yang nanti memiliki data nodes dan master nodes." />
+<meta name="twitter:site" content="https://sulaeman.com/" />
+<meta name="twitter:creator" content="Sulaeman" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mencoba menggunakan layanan AWS Elasticsearch :: Sulaeman — Mikir...">
+<meta property="og:description" content="Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah self-managed Elasticsearch cluster. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari self-managed Elasticsearch cluster ke AWS Elasticsearch Service
+1: Membuat Elasticsearch domain  Pertama kali kamu harus membuat sebuah Elasticsearch domain. Domain ini adalah sebuah cluster yang nanti memiliki data nodes dan master nodes." />
+<meta property="og:url" content="https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/" />
+<meta property="og:site_name" content="Mencoba menggunakan layanan AWS Elasticsearch" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2020-11-20 17:30:12 &#43;0700 WIB" />
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51110409-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sulaeman
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/tags/cloud">Cloud</a></li>
+        
+      
+        
+          <li><a href="/tags/code">Code</a></li>
+        
+      
+        
+          <li><a href="/tags/learning">Learning</a></li>
+        
+      
+        
+          <li><a href="/tags/server">Server</a></li>
+        
+      
+        
+          <li><a href="/tags/electronic">Electronic</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/sulaeman/">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://github.com/feelinc">Github</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/tags/cloud">Cloud</a></li>
+      
+    
+      
+        <li><a href="/tags/code">Code</a></li>
+      
+    
+      
+        <li><a href="/tags/learning">Learning</a></li>
+      
+    
+      
+        <li><a href="/tags/server">Server</a></li>
+      
+    
+      
+        <li><a href="/tags/electronic">Electronic</a></li>
+      
+    
+      
+        <li><a href="https://www.linkedin.com/in/sulaeman/">LinkedIn</a></li>
+      
+    
+      
+        <li><a href="https://github.com/feelinc">Github</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/sulaeman">Twitter</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://sulaeman.com/posts/mencoba-menggunakan-layanan-aws-elasticsearch/">Mencoba menggunakan layanan AWS Elasticsearch</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-11-20
+    </span>
+    
+    
+    <span class="post-author">::
+      Sulaeman
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://sulaeman.com/tags/cloud/">cloud</a>&nbsp;
+    
+    #<a href="https://sulaeman.com/tags/server/">server</a>&nbsp;
+    
+    #<a href="https://sulaeman.com/tags/learning/">learning</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    <p><img src="/img/AWS-ES-Domain-1.png" alt="AWS ES Domain"></p>
+<p>Saya mencoba menjelaskan langkah-langkah apa yang harus dilakukan untuk setup layanan AWS Elasticsearch. Kondisinya saya sudah mempunyai sebuah <code>self-managed Elasticsearch cluster</code>. Snapshot setiap jam dari Elasticsearch cluster tersebut sudah tersimpan didalam layanan AWS S3. Jadi nantinya saya akan melakukan migrasi dari <code>self-managed Elasticsearch cluster</code> ke <code>AWS Elasticsearch Service</code></p>
+<h2 id="1-membuat-elasticsearch-domain">1: Membuat Elasticsearch domain</h2>
+<hr>
+<p>Pertama kali kamu harus membuat sebuah <code>Elasticsearch domain</code>. Domain ini adalah sebuah cluster yang nanti memiliki <code>data nodes</code> dan <code>master nodes</code>.</p>
+<h4 id="11-deployment-type">1.1: Deployment type</h4>
+<p>Pertama kali kamu harus memilih <code>Deployment type</code>, saya memilih <code>Development and testing</code> karena untuk mencoba saja.</p>
+<h4 id="12-version">1.2: Version</h4>
+<p>Untuk <code>Version</code> saya memilih <code>7.8</code> (saat tulisan ini dibuat adalah <code>latest</code>). Karena <code>self-managed Elasticsearch cluster</code> saya memakai versi 6.x, sehingga ketika akan melakukan migrasi data masih bisa diterima oleh versi 7.x. Tetapi tidak akan diterima oleh versi 8.x.</p>
+<h4 id="14-elasticsearch-domain-name">1.4: Elasticsearch domain name</h4>
+<p>Isi nama domain yang akan kamu buat, misalnya <code>es-aws-1</code>. Kamu nantinya bisa membuat beberapa domain, jadi kalau saya lebih menyukai terdapat penomoran pada namanya.</p>
+<h4 id="15-custom-endpoint">1.5: Custom endpoint</h4>
+<p>Kamu bisa menggunakan Endpoint sendiri, dengan mengetik nama host dari domain yang kamu punya. Tetapi host tersebut harus memiliki sertifikat SSL yang sudah terdaftar di <code>Amazon Certificate Manager</code>. Biarkan jika akan menggunakan Endpoint yang dibuatkan oleh AWS.</p>
+<h4 id="16-data-nodes">1.6: Data nodes</h4>
+<p>Tentukan <code>Instance type</code> yang akan dipakai sebagai <code>Data nodes</code> dan jumlahnya, sesuaikan dengan kebutuhan aplikasi kamu. Untuk <code>Production</code> disarankan minimal 3 nodes, baca <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/sizing-domains.html#aes-bp-instances">Choosing Instance Types and Testing</a>. Saya memilih <code>t3.small.elasticsearch</code> karena hanya untuk mencoba saja dan hanya membutuhkan <code>1</code> (satu) node.</p>
+<h4 id="17-data-nodes-storage">1.7: Data nodes storage</h4>
+<p>Pilih <code>EBS</code>, tipe <code>General Purpose (SSD)</code>. Untuk besarnya tempat penyimpanan bisa baca <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/sizing-domains.html">Sizing Amazon ES Domains</a>. Saya membutuhkan hanya <code>10</code> GiB untuk mencoba saja.</p>
+<h4 id="18-dedicated-master-nodes">1.8: Dedicated master nodes</h4>
+<p>Kamu harus memiliki Dedicated master nodes untuk <code>Production</code> sesuai rekomendasi yang tertera. Sedangkan saya karena sebelumnya memilih <code>Development and testing</code>, maka tidak memerlukan Dedicated master nodes.</p>
+<h4 id="19-snapshot-configuration">1.9: Snapshot configuration</h4>
+<p>Untuk versi <code>5.3 dan setelahnya</code> akan dilakukan snapshot secara otomatis setiap jam, dan tersimpan selama 14 hari dengan maksimal 336 snapshot.
+Karena memilih versi <code>7.8</code>, maka tidak terdapat opsi untuk melakukan konfigurasi. Kamu nanti bisa membuat konfigurasi snapshot secara manual langsung terhadap Elasticsearch cluster yang telah sukses dibuat, dimana <code>S3</code> sebagai media penyimpanannya.</p>
+<h4 id="110-network-configuration">1.10: Network configuration</h4>
+<p>Kamu direkomendasikan untuk memilih <code>VPC access</code>, karena menambah lapisan keamanan, jadi hanya sesuatu yang berada di-<code>VPC</code> yang sama seperti layanan AWS<code>EC2, Lambda, dan lainnya</code> yang bisa mengakses Elasticsearch cluster ini dan .</p>
+<p>Jika kamu memilih <code>VPC access</code>, maka bisa memilih <code>Security Groups</code> yang akan dipakai. Sebagai contoh didalam Security Groups kamu bisa menentukan <code>Instances EC2</code> atau <code>IP Address</code> mana yang diperbolehkan mengakses Elasticsearch cluster ini. Kamu dapat memilih lebih dari 1 (satu) Security Group. <a href="https://console.aws.amazon.com/ec2/v2/home#SecurityGroups:">Buat terlebih dahulu sebuah Security Group</a> jika belum mempunyai, dengan isian yang sudah tersedia, hanya mengisi nama dan deskripsi saja.</p>
+<h4 id="111-finegrained-access-control">1.11: Fine–grained access control</h4>
+<blockquote>
+<p>Kamu disarankan untuk mengaktifkan fitur ini.</p>
+</blockquote>
+<p>Sedangkan untuk <code>Master user</code>, jika kamu memilih <code>IAM ARN</code>, maka hanya bisa menggunakan <code>IAM Roles</code> atau <code>IAM Users</code>. Dimana untuk nantinya mengakses <code>Kibana</code>, kamu harus mengaktifkan fitur otentikasi dari <code>SAML</code> atau <code>Amazon Cognito</code>. Dengan memilih <code>IAM ARN</code>, ketika akan mengakses Elasticsearch cluster ini, jika kamu menggunakan:</p>
+<ul>
+<li><code>IAM Roles</code>, maka sebagai contoh hanya <code>Instances EC2</code> yang memiliki roles itu yang dapat mengakses, baca <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html">Using an IAM role to grant permissions to applications running on Amazon EC2 instances</a>.</li>
+<li><code>IAM Users</code>, maka aplikasi yang akan mengakses harus menggunakan kredensial dari user itu, menggunakan <code>Access key ID</code> dan <code>Secret access key</code> yang akan dipakai untuk melakukan <code>request signing</code>.</li>
+</ul>
+<p>Jika ingin lebih mudah, kamu bisa memilih <code>Create master user</code>, nantinya kamu harus memakai <code>&lt;username&gt;:&lt;password&gt;</code> ketika akan mengakses Elasticsearch cluster ini dengan <code>HTTP basic authentication</code>.</p>
+<h4 id="112-saml-authentication-for-kibana-dan-amazon-cognito-authentication">1.12: SAML authentication for Kibana dan Amazon Cognito authentication</h4>
+<p>Saat tulisan ini dibuat saya belum mencoba kedua fitur ini. Silahkan kamu tentukan sendiri sesuaikan dengan pilihan sebelumnya mengenai <code>master user</code> atau biarkan saja.</p>
+<h4 id="113-access-policy">1.13: Access policy</h4>
+<p>Kamu bisa menambah lapisan keamanan dengan menentukan siapa atau apa yang diperbolehkan mengakses Elasticsearch cluster ini. Jika kamu mengaktifkan <code>Fine–grained access control</code> pada opsi sebelumnya, tidak disarankan untuk menggunakan <code>IAM-based</code> access policy, karena akan terjadi konflik. Jadi kamu cukup menentukan <code>IPv4 address atau CIDR block</code>.</p>
+<p>Kamu bisa memilih <code>Allow open access to the domain</code> terlebih dahulu, dan nanti bisa menggubah opsi <code>Access policy</code> jika Elasticsearch cluster ini sudah dicoba.</p>
+<h4 id="114-encryption">1.14: Encryption</h4>
+<p>Jika kamu mengaktifkan <code>Fine–grained access control</code>, maka semua opsi enkripsi wajib diaktifkan. Kemudian tentukan <code>KMS master key</code> yang akan digunakan, atau biarkan pilihan <code>Default</code>.</p>
+<h4 id="115-review">1.15: Review</h4>
+<p>Periksa kembali semua opsi yang telah kamu tentukan. Kemudian <code>Confirm</code> jika sudah yakin.</p>
+<h2 id="2-menggunakan-elasticsearch-cluster--domain">2: Menggunakan Elasticsearch cluster / domain</h2>
+<hr>
+<p>Pada tab <code>Overview</code>, tunggu hingga <code>Domain satus</code> sudah <code>Active</code> sebelum mulai menggunakan.</p>
+<h2 id="3-migrasi-data-ke-amazon-elasticsearch-service">3: Migrasi data ke Amazon Elasticsearch Service</h2>
+<hr>
+<p>Silahkan lanjutkan membaca bagian ini pada halaman <a href="/posts/migrasi-data-ke-amazon-elasticsearch-service">Migrasi data ke Amazon Elasticsearch Service</a></p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://sulaeman.com/posts/migrasi-data-ke-amazon-elasticsearch-service/">
+          <span class="button__text">Migrasi data ke Amazon Elasticsearch Service</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy; Sulaeman :: Powered by gohugo.io</div>
+    
+  </div>
+</footer>
+
+<script src="https://sulaeman.com/assets/main.js"></script>
+<script src="https://sulaeman.com/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
