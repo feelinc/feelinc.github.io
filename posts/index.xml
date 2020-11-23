@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Fri, 20 Nov 2020 18:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2020 17:30:12 +0700</lastBuildDate>
     
 	<atom:link href="https://sulaeman.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mengakses AWS Elasticsearch didalam VPC dari lokal</title>
+      <link>https://sulaeman.com/posts/mengakses-aws-elasticsearch-didalam-vpc-dari-lokal/</link>
+      <pubDate>Sun, 22 Nov 2020 17:30:12 +0700</pubDate>
+      
+      <guid>https://sulaeman.com/posts/mengakses-aws-elasticsearch-didalam-vpc-dari-lokal/</guid>
+      <description>Jika Elasticsearch cluster kamu berada didalam sebuah VPC, maka langkah pertama adalah mengkonfigurasi Security Group yang terpilih untuk Elasticsearch domain kamu.
+1: Security Group  Misalkan Security Group yang terpilih untuk Elasticsearch cluster kamu namanya adalah Elasticsearch, maka edit Inbound rules pada Security Group tersebut, kemudian tambah seperti terlihat pada gambar berikut.
+2: SSH Tunnel  Pergunakan SSH Tunnel dari komputer lokal kamu, ke sebuah Instance EC2 yang kamu miliki, dimana instance tersebut berada didalam sebuah VPC yang sama dengan target Elasticsearch cluster.</description>
+    </item>
     
     <item>
       <title>Migrasi data ke Amazon Elasticsearch Service</title>
