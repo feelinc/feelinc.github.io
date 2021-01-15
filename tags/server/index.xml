@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Sulaeman :: Powered by gohugo.io</copyright>
-    <lastBuildDate>Sun, 22 Nov 2020 17:30:12 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 07:30:12 +0700</lastBuildDate>
     
 	<atom:link href="https://sulaeman.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Membuat Docker image kecil untuk aplikasi Go &#43; Supervisor &#43; Cron</title>
+      <link>https://sulaeman.com/posts/membuat-docker-image-kecil-untuk-app-go-supervisor-cron/</link>
+      <pubDate>Fri, 15 Jan 2021 07:30:12 +0700</pubDate>
+      
+      <guid>https://sulaeman.com/posts/membuat-docker-image-kecil-untuk-app-go-supervisor-cron/</guid>
+      <description>Docker image untuk aplikasi berbasis Golang biasanya mempunyai ukuran yang cukup besar, untuk keperluan digunakan pada sebuah Containers as a service (CaaS) akan memakan waktu untuk diupload.
+Kamu dapat memperkecil ukuran image-nya dengan menggunakan konsep multi-stage builds, sehingga untuk aplikasi berbasis Golang berikut Supervisor dan Cron hanya berukuran sekitar 100 MB.
+1: Struktur  Struktur yang sesuai dari aplikasi berbasis Golang kamu sangat penting dalam hal ini, berikut struktur dasar folder dan file yang dapat kamu terapkan:</description>
+    </item>
     
     <item>
       <title>Mengakses AWS Elasticsearch didalam VPC dari lokal</title>
